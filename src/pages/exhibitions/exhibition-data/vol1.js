@@ -1,8 +1,8 @@
 const vol1 = {
   meta: {
     name: 'vol-1',
-    displayName: 'Vol. 1',
-    about: 'Stories x Stories',
+    displayName: 'Vol. 1 (Preview)',
+    about: '', // 'Stories x Stories',
     imageFolderName: 'vol1',
   },
   showings: [
@@ -23,7 +23,7 @@ const vol1 = {
       description: 'From <i>The Fall</i>, by Albert Camus.',
     },
     {
-      fileName: '009.JPG',
+      fileName: '009-intimacy-in-the-open.jpeg',
       displayName: 'Intimacy in the Open',
       description: '',
     },

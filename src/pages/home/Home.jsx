@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 import ReactGA from 'react-ga4';
 import React, { useEffect } from 'react';
 import './Home.css';
@@ -9,9 +10,14 @@ function Home() {
   }, []);
   return (
     <div className="home">
-      <div className="typewriter">
+      {/* <div className="typewriter">
         <h3 id="hello-world">&gt; Hello World!</h3>
-      </div>
+      </div> */}
+      <img
+        src={require('./twbm.jpg')}
+        alt="twbm"
+        width={250}
+      />
     </div>
   );
 }

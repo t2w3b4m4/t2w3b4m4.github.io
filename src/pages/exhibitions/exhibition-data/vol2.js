@@ -1,7 +1,7 @@
-const vol1 = {
+const vol2 = {
   meta: {
     name: 'vol-2',
-    displayName: 'Vol. 2',
+    displayName: 'Vol. 2 (Preview)',
     about: 'Materialism x Love Story',
     imageFolderName: 'vol2',
   },
@@ -11,7 +11,8 @@ const vol1 = {
       displayName: '真參不變',
       description: `True (真) heart (心)* does not (不) change (變).<br/>
       At the Queens Museum with a group of friends on a day after heavy snow.<br/>
-      People walked past this, but I stopped and admired. (* 參 means ginseng and it sounds like 心 in Cantonese.)`,
+      People walked past this, but I stopped and admired.<br/>
+      (* 參 means ginseng and it sounds like 心 in Cantonese.)`,
       date: '2017-12-01',
     },
     {
@@ -62,4 +63,4 @@ const vol1 = {
   ],
 };
 
-export default vol1;
+export default vol2;
