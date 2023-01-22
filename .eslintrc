@@ -1,9 +1,0 @@
-{
-  "extends": ["airbnb", "airbnb/hooks"],
-  "rules": {
-    "import/prefer-default-export": "warn",
-    "no-trailing-spaces": "warn",
-    "react/jsx-filename-extension": "off",
-    "no-debugger": "off"
-  }
-}

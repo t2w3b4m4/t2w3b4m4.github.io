@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.00fb61a0.css",
+    "main.js": "/static/js/main.fe76831c.js",
+    "static/media/087-rooms-by-the-sea.jpg": "/static/media/087-rooms-by-the-sea.bc04b45860f8a1d8c023.jpg",
+    "static/media/080-a-song-for-you-1.jpg": "/static/media/080-a-song-for-you-1.dca609543c90e561629b.jpg",
+    "static/media/009-love-one-another.jpg": "/static/media/009-love-one-another.dc6318554b69357d0436.jpg",
+    "static/media/012-pre-lock-down.jpg": "/static/media/012-pre-lock-down.e3044ef1da89dbe2e018.jpg",
+    "static/media/088-self-writing-story.jpg": "/static/media/088-self-writing-story.6b85b0c7c9e41621045a.jpg",
+    "static/media/040-the-most-magical-place-on-earth.jpeg": "/static/media/040-the-most-magical-place-on-earth.bf6b07a095d006b8e860.jpeg",
+    "static/media/055-wish-no-1.jpeg": "/static/media/055-wish-no-1.9e3f23582aa4d0dbaa1e.jpeg",
+    "static/media/top-of-the-rock.jpg": "/static/media/top-of-the-rock.f157660203d973bcd068.jpg",
+    "static/media/084.JPG": "/static/media/084.86b92a89ae484f02c5e3.JPG",
+    "static/media/018-blasphemy.jpeg": "/static/media/018-blasphemy.d7d8383e405b73f92e1d.jpeg",
+    "static/media/028.JPG": "/static/media/028.8670468cc159feb3a237.JPG",
+    "static/media/heavily-minimal.jpeg": "/static/media/heavily-minimal.1116264444cda59825b6.jpeg",
+    "static/media/070.JPG": "/static/media/070.22c88813085ed098adb8.JPG",
+    "static/media/009.JPG": "/static/media/009.0cbbfc8f323f40225286.JPG",
+    "static/media/064.JPG": "/static/media/064.4124d8e5e3a06f5ee6d9.JPG",
+    "static/media/050.JPG": "/static/media/050.19cce65ab3b77bf573ff.JPG",
+    "static/media/094.JPG": "/static/media/094.d652ecf4f73640978312.JPG",
+    "static/media/002-edited.jpeg": "/static/media/002-edited.b1720504b24eba5a7fc5.jpeg",
+    "static/media/pedestal2.jpg": "/static/media/pedestal2.5e3d871c2208165021b2.jpg",
+    "static/media/precarious2.jpg": "/static/media/precarious2.030abac5c8b27208bf6f.jpg",
+    "static/media/432-park-ave.jpg": "/static/media/432-park-ave.07cabc2cea85bcb8fa11.jpg",
+    "static/media/001-zhen-xin-bu-bian.jpg": "/static/media/001-zhen-xin-bu-bian.9ba03bc414695b917282.jpg",
+    "static/media/skylight.jpg": "/static/media/skylight.55b47c646ba77013eee8.jpg",
+    "static/media/pedestal1.jpg": "/static/media/pedestal1.abbd94fcdf23c1a0baf5.jpg",
+    "static/media/skylight-panel.jpg": "/static/media/skylight-panel.2651bde7b9494683b842.jpg",
+    "static/media/basement-walls.jpg": "/static/media/basement-walls.06b757b9f010b18ae69e.jpg",
+    "static/media/006.JPG": "/static/media/006.cddc03e4ac510fa00449.JPG",
+    "static/media/rays.jpg": "/static/media/rays.241f735a996fd615b8a6.jpg",
+    "static/media/033-your-wife-is-hot.jpeg": "/static/media/033-your-wife-is-hot.72d36bd5e028320f409a.jpeg",
+    "static/media/precarious1.jpg": "/static/media/precarious1.7f20b0f805633a77be7b.jpg",
+    "index.html": "/index.html",
+    "main.00fb61a0.css.map": "/static/css/main.00fb61a0.css.map",
+    "main.fe76831c.js.map": "/static/js/main.fe76831c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.00fb61a0.css",
+    "static/js/main.fe76831c.js"
+  ]
+}
