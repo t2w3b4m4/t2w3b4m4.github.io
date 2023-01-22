@@ -1,0 +1,115 @@
+.hidden {
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.app-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.app-content {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.app-content {
+  overflow: scroll;
+}
+
+/* html, */
+/* body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+
+  display: grid;
+  align-content: center; /* vertical 
+  justify-content: center; /* horizontal 
+  line-height: 10pt;
+} */
+
+/* .App {
+  box-shadow: 5px 10px 8px #888888;
+  border-radius: 5px 5px 30px 5px; /* 'union' of .app-content's and .console's  
+  margin: 3em 2em;
+} */
+
+/* 
+.app-content {
+  /* box-sizing: content-box; 
+  z-index: 1;
+
+  width: 85%;
+  height: 85%;
+  background-color: #eee;
+
+  position: absolute;
+  top: 7.5%;
+  left: 7.5%;
+} */
+
+
+/* padding for contents on screen */
+/* .app-content > * {
+  padding: 1em;
+} */
+
+/* .banner {
+  width: 320px;
+  padding: 10px 30px;
+  background-color: #eee;
+  border: 2px solid #000000;
+
+  text-align: center;
+} */
+.console-wrapper {
+  position: relative;
+}
+.console {
+  position: relative;
+  display: grid;
+  /* box-sizing: content-box; */
+  width: 320px;
+  height: 144px;
+  padding: 30px;
+
+  /* background-color: #eee; */
+  background-color: rgb(47, 47, 47);
+
+  border: 2px solid #000000;
+  border-radius: 0px 0px 30px 5px;
+
+  /* overflow: scroll; */
+
+  position: relative;
+}
+
+.not-selectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+/* anchor */
+a.anchor-hover-no-effect:hover {
+  text-decoration: none important!;
+  background-color: black;
+}
+
+/* list */
+.inline-list li {
+  display: inline;
+}

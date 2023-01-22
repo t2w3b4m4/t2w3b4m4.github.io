@@ -1,0 +1,16 @@
+ul.inline-list li {
+  display: inline;
+  margin: 0 1em 0 1em;
+}
+
+.about {
+  line-height: 1.5em;
+}
+
+.git-link {
+  vertical-align: middle
+}
+
+.icon-font-size-height {
+  height: 1em;
+}

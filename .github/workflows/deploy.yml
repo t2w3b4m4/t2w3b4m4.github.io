@@ -1,0 +1,29 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code in develop branch
+        uses: actions/checkout@v2
+        with:
+          ref: develop
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependency and build
+        run: |
+          npm ci
+          CI=false npm run build
+      
+      - name: Deploy to master (as github page)
+        uses: JamesIves/github-pages-deploy-action@4.1.7
+        with:
+          branch: master # The branch the action should deploy to
+          folder: build
