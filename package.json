@@ -1,7 +1,7 @@
 {
-  "name": "majiasheng",
-  "version": "2.0.1",
-  "homepage": "https://majiasheng.github.io/",
+  "name": "twbm",
+  "version": "0.0.1",
+  "homepage": "https://t2w3b4m4.github.io/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
