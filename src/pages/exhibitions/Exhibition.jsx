@@ -40,7 +40,7 @@ function Exhibition({ data }) {
   };
 
   const handleMouseMoveCaptureOnImage = (e) => {
-    const start = e.target.x;
+    const start = e.target.offsetLeft;
     const end = start + e.target.width;
     const middle = (start + end) / 2;
 
