@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1924225f.css",
-    "main.js": "/static/js/main.6dfb4d38.js",
+    "main.js": "/static/js/main.4a0ba4f4.js",
     "static/media/087-rooms-by-the-sea.jpg": "/static/media/087-rooms-by-the-sea.bc04b45860f8a1d8c023.jpg",
     "static/media/080-a-song-for-you-1.jpg": "/static/media/080-a-song-for-you-1.dca609543c90e561629b.jpg",
     "static/media/009-love-one-another.jpg": "/static/media/009-love-one-another.dc6318554b69357d0436.jpg",
@@ -34,10 +34,10 @@
     "static/media/precarious1.jpg": "/static/media/precarious1.7f20b0f805633a77be7b.jpg",
     "index.html": "/index.html",
     "main.1924225f.css.map": "/static/css/main.1924225f.css.map",
-    "main.6dfb4d38.js.map": "/static/js/main.6dfb4d38.js.map"
+    "main.4a0ba4f4.js.map": "/static/js/main.4a0ba4f4.js.map"
   },
   "entrypoints": [
     "static/css/main.1924225f.css",
-    "static/js/main.6dfb4d38.js"
+    "static/js/main.4a0ba4f4.js"
   ]
 }
