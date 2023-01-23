@@ -6,6 +6,7 @@
 /* eslint-disable react/forbid-prop-types */
 import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
+// import { Link } from 'react-router-dom';
 import getImagePathByFileName from './getImagePathByFileName';
 import '../../styles/Exhibition.css';
 
@@ -82,11 +83,11 @@ function Exhibition({ data }) {
   return (
     <div className="exhibition">
       <div className="exhibition-header">
-        {/* <div className="back-button">
-          <Link to="/exhibitions" title="back">
-            {'<- '}
-          </Link>
-        </div> */}
+        <div className="back-button">
+          {/* <Link to="/exhibitions" title="back">
+            ↞
+          </Link> */}
+        </div>
         <div className="exhibition-name">{data.meta.displayName}</div>
         <div className="exhibition-discription">{data.meta.about}</div>
       </div>

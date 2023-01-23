@@ -34,6 +34,7 @@ function ExhibitionThumbnail({ data }) {
           />
         </div>
         <div className="exhibition-thumbnail-text">
+          {/* <hr /> */}
           <h4 className="exhibition-name">{data.meta.displayName}</h4>
           <div className="exhibition-description">{data.meta.about}</div>
         </div>

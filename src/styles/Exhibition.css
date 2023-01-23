@@ -28,16 +28,20 @@
   background-color: #f7f5f5;
   height: 348px;
   display: flex;
-  justify-content: center; /* align horizontal */
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 122px;
 }
 
 .focused-image-wrapper {
   box-shadow: 8px 3px 8px #888888;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .focused-image {
+  /* border: 2px solid rgb(106, 105, 105);
+  border-radius: 2px; */
   /* max-height: 348px; */
   width: 300px;
   position: relative;
@@ -96,7 +100,7 @@
 .focused-image-thumbnail {
   /* border-color: rgb(247, 197, 197) !important; */
   /* border-bottom-color: rgb(241, 190, 190) !important; */
-  border-bottom-color: antiquewhite !important;
+  border-bottom-color: rgb(103, 100, 100) !important;
 }
 
 .image-info {

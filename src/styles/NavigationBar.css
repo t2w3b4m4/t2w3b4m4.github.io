@@ -42,5 +42,6 @@ ul#nav-items li {
   /* background-color: aqua; */
   border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-bottom-color: antiquewhite;
+  /* border-bottom-color: antiquewhite; */
+  border-bottom-color: rgb(103, 100, 100);
 }
