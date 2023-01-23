@@ -1,15 +1,21 @@
 body {
-  /* margin: 0; */
+  margin: auto;
   padding: 24px;
   font-family: monospace, monaco, "Courier New", PressStart2P, -apple-system,
     BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 100;
-  max-width: 595px;
+  max-width: 620px;
   color: #555454;
+
+  /* background-color: #f8f8f8; */
+  height: 768px;
+
+  /* box-shadow: 8px 3px 8px #888888;
+  z-index: 1; */
 
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
