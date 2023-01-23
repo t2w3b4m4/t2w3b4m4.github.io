@@ -35,9 +35,6 @@ function Exhibitions() {
         ))}
 
       </Switch>
-      {/* <hr />
-      <h4>Volumes</h4>
-      <a href={twbm} target="_blank" rel="noreferrer">• TWBM Vol.1</a> */}
     </div>
   );
 }

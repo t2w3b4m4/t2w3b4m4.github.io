@@ -10,14 +10,15 @@ function Home() {
   }, []);
   return (
     <div className="home">
+      <h3 id="hello-world">Hello World!</h3>
       {/* <div className="typewriter">
         <h3 id="hello-world">&gt; Hello World!</h3>
       </div> */}
-      <img
+      {/* <img
         src={require('./twbm.jpg')}
         alt="twbm"
         width={250}
-      />
+      /> */}
     </div>
   );
 }

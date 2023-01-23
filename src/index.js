@@ -6,7 +6,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactGA.initialize('G-QE1E9PSV7H', {
+ReactGA.initialize('G-5R7L8CK8VD', {
   // debug: true,
 });
 

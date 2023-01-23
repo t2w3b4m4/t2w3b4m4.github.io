@@ -147,7 +147,6 @@ function Exhibition({ data }) {
           </div>
           <div className="image-description" dangerouslySetInnerHTML={{ __html: data.showings[indexOfFocusedImage].description }} />
         </div>
-
       </div>
     </div>
   );
