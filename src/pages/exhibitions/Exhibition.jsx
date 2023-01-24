@@ -56,13 +56,15 @@ function Exhibition({ data }) {
   };
 
   const handleImageClick = () => {
+    let indexOfImage = (numOfImages + indexOfFocusedImage + 1) % numOfImages;
     if (mouseHoverPointerClass === ON_HOVER_MOUSE_POINTER_LEFT_CLASS) {
-      const indexOfImage = (numOfImages + indexOfFocusedImage - 1) % numOfImages;
-      setIndexOfFocusedImage(indexOfImage);
-    } else {
-      const indexOfImage = (numOfImages + indexOfFocusedImage + 1) % numOfImages;
-      setIndexOfFocusedImage(indexOfImage);
+      indexOfImage = (numOfImages + indexOfFocusedImage - 1) % numOfImages;
     }
+    setIndexOfFocusedImage(indexOfImage);
+
+    // Show current image in slide show
+    // eslint-disable-next-line no-undef
+    document.getElementById(indexOfImage).scrollIntoView();
   };
 
   const handleSlideShowLeftClick = () => {
@@ -140,6 +142,7 @@ function Exhibition({ data }) {
                   role="menuitem"
                   tabIndex={0}
                   onKeyDown={handleKeyDownCapture}
+                  id={index}
                 >
                   <img
                     className="exhibition-slide-show-thumbnail"
