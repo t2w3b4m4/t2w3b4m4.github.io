@@ -5,9 +5,9 @@
 /* eslint-disable import/no-dynamic-require */
 /* eslint-disable global-require */
 /* eslint-disable react/forbid-prop-types */
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import getImagePathByFileName from './getImagePathByFileName';
 import '../../styles/Exhibition.css';
 
@@ -34,6 +34,7 @@ const ON_HOVER_MOUSE_POINTER_RIGHT_CLASS = 'on-hover-mouse-pointer-right';
 function Exhibition({ data }) {
   const exhibitionSlideShowRef = useRef(null);
   const numOfImages = data.showings.length;
+  const history = useHistory();
   const [indexOfFocusedImage, setIndexOfFocusedImage] = useState(0);
   const [mouseHoverPointerClass, setMouseHoverPointerClass] = useState('');
 
@@ -61,6 +62,7 @@ function Exhibition({ data }) {
       indexOfImage = (numOfImages + indexOfFocusedImage - 1) % numOfImages;
     }
     setIndexOfFocusedImage(indexOfImage);
+    history.push(`#${indexOfImage}`);
 
     // Show current image in slide show
     // eslint-disable-next-line no-undef
@@ -82,6 +84,17 @@ function Exhibition({ data }) {
   const handleKeyDownCapture = (e) => {
     if (e.key === ' ') { e.target.click(); }
   };
+
+  useEffect(() => {
+    // eslint-disable-next-line no-undef
+    const exhibitionAndFocusedImage = window.location.hash.split('/').at(-1).split('#');
+    if (exhibitionAndFocusedImage.length === 2) {
+      const urlIndexOfFocusedImage = parseInt(exhibitionAndFocusedImage[1], 10);
+      setIndexOfFocusedImage(urlIndexOfFocusedImage);
+      // eslint-disable-next-line no-undef
+      document.getElementById(urlIndexOfFocusedImage).scrollIntoView();
+    }
+  }, []);
 
   return (
     <div className="exhibition">
@@ -144,11 +157,13 @@ function Exhibition({ data }) {
                   onKeyDown={handleKeyDownCapture}
                   id={index}
                 >
-                  <img
-                    className="exhibition-slide-show-thumbnail"
-                    src={require(`${getImagePathByFileName(data, s.fileName)}`)}
-                    alt={s.displayName}
-                  />
+                  <Link to={`#${index}`}>
+                    <img
+                      className="exhibition-slide-show-thumbnail"
+                      src={require(`${getImagePathByFileName(data, s.fileName)}`)}
+                      alt={s.displayName}
+                    />
+                  </Link>
                 </div>
               ))}
             </div>
