@@ -1,6 +1,6 @@
 import ReactGA from 'react-ga4';
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import routes from './routes';
 import './styles/App.css';
 import NotFound from './pages/404';
