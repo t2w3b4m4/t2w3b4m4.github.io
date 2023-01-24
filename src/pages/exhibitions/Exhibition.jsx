@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/no-danger */
@@ -42,7 +43,7 @@ function Exhibition({ data }) {
 
   const handleMouseMoveCaptureOnImage = (e) => {
     const start = e.target.offsetLeft;
-    const end = start + e.target.width;
+    const end = start + e.target.clientWidth;
     const middle = (start + end) / 2;
 
     if (middle > e.clientX) {
@@ -93,14 +94,32 @@ function Exhibition({ data }) {
       </div>
       <div className="exhibition-body">
         <div className="exhibition-image-wrapper">
-          <div className="focused-image-wrapper">
-            <img
-              className={`focused-image ${mouseHoverPointerClass}`}
-              src={require(`${getImagePathByFileName(data, data.showings[indexOfFocusedImage].fileName)}`)}
-              alt={data.showings[indexOfFocusedImage].displayName}
-              onMouseMove={handleMouseMoveCaptureOnImage}
-              onClick={handleImageClick}
-            />
+          <div
+            className={`focused-content-wrapper ${mouseHoverPointerClass}`}
+            onMouseMove={handleMouseMoveCaptureOnImage}
+            onClick={handleImageClick}
+          >
+            <span className="focused-image-wrapper">
+              <img
+                className="focused-image"
+                src={require(`${getImagePathByFileName(data, data.showings[indexOfFocusedImage].fileName)}`)}
+                alt={data.showings[indexOfFocusedImage].displayName}
+              // onMouseMove={handleMouseMoveCaptureOnImage}
+              // onClick={handleImageClick}
+              />
+            </span>
+            <div
+              className="focused-image-description"
+            >
+              <div className="image-title">
+                {data.showings[indexOfFocusedImage].displayName}
+                {/* <hr /> */}
+              </div>
+              <div className="image-info">
+                <div className="image-description" dangerouslySetInnerHTML={{ __html: data.showings[indexOfFocusedImage].description }} />
+              </div>
+
+            </div>
           </div>
           <div className="exhibition-slide-show-wrapper">
             <div
@@ -140,13 +159,6 @@ function Exhibition({ data }) {
               ➤
             </div>
           </div>
-        </div>
-        <div className="image-info">
-          <div className="image-name">
-            {data.showings[indexOfFocusedImage].displayName}
-            <hr />
-          </div>
-          <div className="image-description" dangerouslySetInnerHTML={{ __html: data.showings[indexOfFocusedImage].description }} />
         </div>
       </div>
     </div>
