@@ -6,6 +6,7 @@
   width: 71mm;
   background-color: #f7f5f5;
   box-shadow: 8px 3px 8px #888888;
+  z-index: 1;
 }
 
 .fujifilm-photo {
@@ -70,6 +71,7 @@
   scroll-behavior: smooth;
   background-color: #fcfcfcf6;
   padding-right: 10px;
+  padding-left: 10px;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
