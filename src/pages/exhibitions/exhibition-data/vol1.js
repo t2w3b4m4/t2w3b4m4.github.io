@@ -9,7 +9,7 @@ const vol1 = {
     {
       fileName: 'heavily-minimal.jpeg',
       displayName: 'Heavily Minimal',
-      description: 'Receipt of the purchase of a cast iron pan in a kitchenware wholesale, striking a stark contrast to the stuffed and chaotic store',
+      description: 'Receipt of the purchase of a cast iron pan in a kitchenware wholesale, striking a stark contrast to the stuffed and chaotic store.',
       date: '2017-12-01',
     },
     {

@@ -4,6 +4,7 @@
     "import/prefer-default-export": "warn",
     "no-trailing-spaces": "warn",
     "react/jsx-filename-extension": "off",
-    "no-debugger": "off"
+    "no-debugger": "off",
+    "max-len":"off"
   }
 }

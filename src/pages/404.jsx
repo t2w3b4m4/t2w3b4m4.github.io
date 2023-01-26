@@ -5,7 +5,7 @@ function NotFound() {
   return (
     <div>
       <div>
-        You got here because you either refreshed your page or your url is not valid
+        404
       </div>
       <h1 className="the-scream">
         <a href="/">🏡 🏃💨</a>

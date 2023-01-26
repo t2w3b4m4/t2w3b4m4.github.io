@@ -16,8 +16,8 @@ function App() {
     <div className="App">
 
       <Router>
-        <div className="logo"><a href="/"><img src="/ma-flipped-transparent.png" alt="馬" /></a></div>
-        <div className="navigation">
+        <div className="logo not-selectable"><a href="/"><img src="/ma-flipped-transparent.png" alt="馬" /></a></div>
+        <div className="navigation not-selectable">
           <NavigationBar />
         </div>
         <div className="app-content">

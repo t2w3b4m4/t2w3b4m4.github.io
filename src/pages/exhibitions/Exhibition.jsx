@@ -108,7 +108,7 @@ function Exhibition({ data }) {
         <div className="exhibition-discription">{data.meta.about}</div>
       </div>
       <div className="exhibition-body">
-        <div className="exhibition-image-wrapper">
+        <div className="exhibition-image-wrapper not-selectable">
           <div
             className={`focused-content-wrapper ${mouseHoverPointerClass}`}
             onMouseMove={handleMouseMoveCaptureOnImage}
@@ -127,6 +127,7 @@ function Exhibition({ data }) {
               className="focused-image-description"
             >
               <div className="image-title">
+                {/* <hr /> */}
                 {data.showings[indexOfFocusedImage].displayName}
                 {/* <hr /> */}
               </div>

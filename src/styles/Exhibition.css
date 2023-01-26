@@ -26,24 +26,25 @@
 
 .focused-content-wrapper {
   background-color: #f7f5f5;
-  height: 500px;
+  height: 488px;
   width: 340px;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
   box-shadow: 8px 3px 8px #888888;
+  padding-bottom: 12px;
 }
 
 .focused-image-wrapper {
-  height: 300;
+  max-height: 60%;
   margin-top: 12px;
   margin-bottom: 12px;
 }
 
 .focused-image-description {
-  height: 52px;
   width: 300px;
+  overflow: scroll;
 }
 
 .image-title {
@@ -52,11 +53,7 @@
 }
 
 .focused-image {
-  /* border: 2px solid rgb(106, 105, 105);
-  border-radius: 2px; */
-  /* max-height: 348px; */
   width: 300px;
-  /* position: relative; */
 }
 
 .exhibition-slide-show-wrapper {

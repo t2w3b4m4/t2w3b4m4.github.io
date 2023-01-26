@@ -22,14 +22,14 @@ function About() {
       </div>
       <h3>What to expect?</h3>
       <div>
-        We will be exploring materialism, symbolism, stories, and more. Materialism, in the context of this book, and in a greater scope of philosophy to me, is the idea that all physical objects/matters are intrinsically rational, and their manifestation of emotions were created by the subjectivity of emotional beings, i.e. us humans.
+        We will be exploring materialism, symbolism, stories, and more. Materialism, in the context of the book, and in a greater scope of philosophy to me, is the idea that all physical objects/matters are intrinsically rational, and their manifestation of emotions were created by the subjectivity of emotional beings, i.e. us humans.
       </div>
       <div>
         <br />
         Have fun.
         <br />
         <br />
-        - majiasheng
+        - mjs
       </div>
     </div>
   );

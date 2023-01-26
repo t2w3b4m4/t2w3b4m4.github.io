@@ -17,10 +17,15 @@ body {
   /* box-shadow: 8px 3px 8px #888888;
   z-index: 1; */
 
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
-  user-select: none; /* Standard */
+  /* disable text select */
+  /* Safari */
+  /* -webkit-user-select: none;  */
+  /* Firefox */
+  /* -moz-user-select: none; */
+  /* IE10+/Edge */
+  /* -ms-user-select: none; */
+  /* Standard */
+  /* user-select: none; */
 }
 
 /* anchors */
