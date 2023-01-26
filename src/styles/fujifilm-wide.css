@@ -1,0 +1,82 @@
+
+/********************************/
+/*       fujifilm suqare        */
+/********************************/
+.fujifilm-body {
+    height: 86mm;
+    width: 108mm;
+    background-color: #f7f5f5;
+    box-shadow: 8px 3px 8px #888888;
+}
+
+.fujifilm-photo {
+    width: 99mm;
+    max-height: 62mm;
+    margin: 7.8125mm 5mm 3mm 5mm;
+}
+
+.fujifilm-description {
+    height: calc(86mm - 62mm - 7.8125mm);
+    width: 99mm;
+    margin: 0 5mm 7.8125mm 5mm;
+    text-align: center;
+    overflow: scroll;
+}
+
+/********************************/
+/*        slide show            */
+/********************************/
+
+.exhibition-slide-show-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+    width: 108mm;
+  }
+  
+  .slide-show-directional {
+    font-size: larger;
+  }
+  
+  .slide-show-directional:hover {
+    cursor: pointer;
+  }
+  
+  .exhibition-slide-show {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    margin: 24px 12px 12px 12px;
+    background-color: #fcfcfcf6;
+  }
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .exhibition-slide-show::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .exhibition-slide-show {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .exhibition-slide-show-thumbnail-wrapper {
+    background-color: #f7f5f5;
+    border: 5px solid #f7f5f5;
+    border-radius: 2px;
+    height: 17mm;
+    width: 17mm;
+  }
+  
+  .exhibition-slide-show-thumbnail {
+    max-height: 15mm;
+    max-width: 15mm;
+  }
+  
+  .focused-image-thumbnail {
+    border-bottom-color: rgb(103, 100, 100) !important;
+  }

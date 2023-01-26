@@ -4,7 +4,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import getImagePathByFileName from './getImagePathByFileName';
-import '../../styles/ExhibitionThumbnail.css';
+// import '../../styles/ExhibitionThumbnail.css';
+import '../../styles/fujifilm-square.css';
 
 /**
  * data: {
@@ -25,17 +26,17 @@ import '../../styles/ExhibitionThumbnail.css';
 function ExhibitionThumbnail({ data }) {
   return (
     <div className="exhibition-thumbnail">
-      <div className="exhibition-thumbnail-body">
-        <div className="exhibition-thumbnail-image-wrapper">
-          <img
-            className="exhibition-thumbnail-image"
-            src={require(`${getImagePathByFileName(data, data.showings[0].fileName)}`)}
-            alt={data.showings[0].name}
-          />
-        </div>
-        <div className="exhibition-thumbnail-text">
+      <div className="fujifilm-body">
+        {/* <div className="exhibition-thumbnail-image-wrapper"> */}
+        <img
+          className="fujifilm-photo"
+          src={require(`${getImagePathByFileName(data, data.showings[0].fileName)}`)}
+          alt={data.showings[0].name}
+        />
+        {/* </div> */}
+        <div className="fujifilm-description">
           {/* <hr /> */}
-          <h4 className="exhibition-name">{data.meta.displayName}</h4>
+          <span className="exhibition-name">{data.meta.displayName}</span>
           <div className="exhibition-description">{data.meta.about}</div>
         </div>
       </div>
