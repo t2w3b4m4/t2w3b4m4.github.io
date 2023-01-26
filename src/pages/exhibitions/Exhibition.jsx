@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
 import { Link, useHistory } from 'react-router-dom';
 import getImagePathByFileName from './getImagePathByFileName';
 import '../../styles/Exhibition.css';
+import '../../styles/fujifilm-square.css';
 
 const SCROLL_WIDTH = 100;
 const ON_HOVER_MOUSE_POINTER_LEFT_CLASS = 'on-hover-mouse-pointer-left';
@@ -99,41 +100,34 @@ function Exhibition({ data }) {
   return (
     <div className="exhibition">
       <div className="exhibition-header">
-        <div className="back-button">
-          {/* <Link to="/exhibitions" title="back">
-            ↞
-          </Link> */}
-        </div>
         <div className="exhibition-name">{data.meta.displayName}</div>
         <div className="exhibition-discription">{data.meta.about}</div>
       </div>
       <div className="exhibition-body">
         <div className="exhibition-image-wrapper not-selectable">
           <div
-            className={`focused-content-wrapper ${mouseHoverPointerClass}`}
+            className={`focused-content-wrapper fujifilm-body ${mouseHoverPointerClass}`}
             onMouseMove={handleMouseMoveCaptureOnImage}
             onClick={handleImageClick}
           >
-            <span className="focused-image-wrapper">
-              <img
-                className="focused-image"
-                src={require(`${getImagePathByFileName(data, data.showings[indexOfFocusedImage].fileName)}`)}
-                alt={data.showings[indexOfFocusedImage].displayName}
-              // onMouseMove={handleMouseMoveCaptureOnImage}
-              // onClick={handleImageClick}
-              />
-            </span>
+            <img
+              className="focused-image fujifilm-photo"
+              src={require(`${getImagePathByFileName(data, data.showings[indexOfFocusedImage].fileName)}`)}
+              alt={data.showings[indexOfFocusedImage].displayName}
+            />
+            {/* <span className="focused-image-wrapper photo">
+            </span> */}
             <div
-              className="focused-image-description"
+              className="focused-image-description fujifilm-description"
             >
               <div className="image-title">
                 {/* <hr /> */}
                 {data.showings[indexOfFocusedImage].displayName}
                 {/* <hr /> */}
               </div>
-              <div className="image-info">
+              {/* <div className="image-info">
                 <div className="image-description" dangerouslySetInnerHTML={{ __html: data.showings[indexOfFocusedImage].description }} />
-              </div>
+              </div> */}
 
             </div>
           </div>
@@ -178,6 +172,9 @@ function Exhibition({ data }) {
               ➤
             </div>
           </div>
+        </div>
+        <div className="image-info">
+          <div className="image-description" dangerouslySetInnerHTML={{ __html: data.showings[indexOfFocusedImage].description }} />
         </div>
       </div>
     </div>

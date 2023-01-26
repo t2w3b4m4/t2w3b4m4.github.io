@@ -17,6 +17,7 @@
 }
 
 .app-content {
+  padding-bottom: 2em;
   overflow: scroll;
 }
 
