@@ -14,7 +14,7 @@ function Contact() {
       Hi there, if you have feedback, inquiry,
       {' '}
       <br />
-      or if you just want to say what&apos;s up,
+      or, if you just want to say what&apos;s up,
       {' '}
       <br />
       feel free to
