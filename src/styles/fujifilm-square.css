@@ -29,7 +29,7 @@
 .exhibition-slide-show-wrapper {
   display: flex;
   flex-direction: row;
-  gap: 6px;
+  gap: 3px;
   align-items: center;
   width: 71mm;
 }
@@ -39,9 +39,9 @@
   flex-direction: column;
   gap: 6px;
   align-items: center;
-  width: 17mm;
+  width: 13mm;
   height: 86mm;
-  margin-left: 12px;
+  /* margin-left: 12px; */
 }
 
 .slide-show-directional {
@@ -69,6 +69,7 @@
   overflow-x: scroll;
   scroll-behavior: smooth;
   background-color: #fcfcfcf6;
+  padding-right: 10px;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -84,15 +85,15 @@
 
 .exhibition-slide-show-thumbnail-wrapper {
   background-color: #f7f5f5;
-  border: 5px solid #f7f5f5;
+  border: 3px solid #f7f5f5;
   border-radius: 2px;
-  height: 17mm;
-  width: 17mm;
+  height: 11mm;
+  width: 11mm;
 }
 
 .exhibition-slide-show-thumbnail {
-  max-height: 15mm;
-  max-width: 15mm;
+  max-height: 11mm;
+  max-width: 11mm;
 }
 
 .focused-image-thumbnail {
