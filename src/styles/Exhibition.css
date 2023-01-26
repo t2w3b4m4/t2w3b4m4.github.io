@@ -17,12 +17,16 @@
 .exhibition-body {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 18px;
 }
 
-/* .exhibition-image-wrapper {
-} */
+.exhibition-image-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+}
 /* 
 .focused-content-wrapper {
   background-color: #f7f5f5;
@@ -54,11 +58,3 @@
 .focused-image {
   width: 300px;
 } */
-
-
-.image-info {
-  /* padding-top: 7.8125mm; */
-  /* display: block;
-  width: fit-content;
-  text-transform: capitalize; */
-}

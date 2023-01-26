@@ -1,26 +1,25 @@
-
 /********************************/
 /*       fujifilm suqare        */
 /********************************/
 .fujifilm-body {
-    height: 86mm;
-    width: 71mm;
-    background-color: #f7f5f5;
-    box-shadow: 8px 3px 8px #888888;
+  height: 86mm;
+  width: 71mm;
+  background-color: #f7f5f5;
+  box-shadow: 8px 3px 8px #888888;
 }
 
 .fujifilm-photo {
-    width: 61mm;
-    max-height: 61mm;
-    margin: 7.8125mm 5mm 3mm 5mm;
+  width: 61mm;
+  max-height: 61mm;
+  margin: 7.8125mm 5mm 3mm 5mm;
 }
 
 .fujifilm-description {
-    height: calc(86mm - 61mm - 7.8125mm);
-    width: calc(61mm);
-    margin: 0 5mm 7.8125mm 5mm;
-    text-align: center;
-    overflow: scroll;
+  height: calc(86mm - 61mm - 7.8125mm);
+  width: calc(61mm);
+  margin: 0 5mm 7.8125mm 5mm;
+  text-align: center;
+  overflow: scroll;
 }
 
 /********************************/
@@ -28,55 +27,80 @@
 /********************************/
 
 .exhibition-slide-show-wrapper {
-    display: flex;
-    flex-direction: row;
-    gap: 6px;
-    align-items: center;
-    width: 71mm;
-  }
-  
-  .slide-show-directional {
-    font-size: larger;
-  }
-  
-  .slide-show-directional:hover {
-    cursor: pointer;
-  }
-  
-  .exhibition-slide-show {
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    margin: 24px 12px 12px 12px;
-    background-color: #fcfcfcf6;
-  }
-  
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .exhibition-slide-show::-webkit-scrollbar {
-    display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .exhibition-slide-show {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
-  
-  .exhibition-slide-show-thumbnail-wrapper {
-    background-color: #f7f5f5;
-    border: 5px solid #f7f5f5;
-    border-radius: 2px;
-    height: 17mm;
-    width: 17mm;
-  }
-  
-  .exhibition-slide-show-thumbnail {
-    max-height: 15mm;
-    max-width: 15mm;
-  }
-  
-  .focused-image-thumbnail {
-    border-bottom-color: rgb(103, 100, 100) !important;
-  }
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  width: 71mm;
+}
+
+.exhibition-slide-show-wrapper-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  width: 17mm;
+  height: 86mm;
+  margin-left: 12px;
+}
+
+.slide-show-directional {
+  font-size: larger;
+}
+
+.slide-show-directional:hover {
+  cursor: pointer;
+}
+
+.exhibition-slide-show {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  margin: 24px 12px 12px 12px;
+  background-color: #fcfcfcf6;
+}
+
+.exhibition-slide-show-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  background-color: #fcfcfcf6;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.exhibition-slide-show::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.exhibition-slide-show {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.exhibition-slide-show-thumbnail-wrapper {
+  background-color: #f7f5f5;
+  border: 5px solid #f7f5f5;
+  border-radius: 2px;
+  height: 17mm;
+  width: 17mm;
+}
+
+.exhibition-slide-show-thumbnail {
+  max-height: 15mm;
+  max-width: 15mm;
+}
+
+.focused-image-thumbnail {
+  border-bottom-color: rgb(103, 100, 100) !important;
+}
+
+.image-info {
+  padding: 12px 3px 12px 3px;
+  display: block;
+  width: calc(71mm - 6px);
+}
