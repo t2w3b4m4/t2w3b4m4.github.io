@@ -13,6 +13,7 @@ body {
 
   /* background-color: #f8f8f8; */
   height: 768px;
+  overflow: scroll;
 
   /* box-shadow: 8px 3px 8px #888888;
   z-index: 1; */
@@ -48,6 +49,14 @@ a.anchor-hover-black-background-white-text:hover {
   -webkit-transform: scale(-1, 1);
   -o-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
+}
+
+.vertical-flip {
+  transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
 }
 
 /* curosr*/

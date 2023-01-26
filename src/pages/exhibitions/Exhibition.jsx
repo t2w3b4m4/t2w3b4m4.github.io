@@ -73,13 +73,15 @@ function Exhibition({ data }) {
   const handleSlideShowLeftClick = () => {
     if (numOfImages <= 1) return;
 
-    exhibitionSlideShowRef.current.scrollLeft -= SCROLL_WIDTH;
+    // exhibitionSlideShowRef.current.scrollLeft -= SCROLL_WIDTH;
+    exhibitionSlideShowRef.current.scrollTop -= SCROLL_WIDTH;
   };
 
   const handleSlideShowRightClick = () => {
     if (numOfImages <= 1) return;
 
-    exhibitionSlideShowRef.current.scrollLeft += SCROLL_WIDTH;
+    // exhibitionSlideShowRef.current.scrollLeft += SCROLL_WIDTH;
+    exhibitionSlideShowRef.current.scrollTop += SCROLL_WIDTH;
   };
 
   const handleKeyDownCapture = (e) => {
@@ -131,17 +133,17 @@ function Exhibition({ data }) {
 
             </div>
           </div>
-          <div className="exhibition-slide-show-wrapper">
+          <div className="exhibition-slide-show-wrapper-vertical">
             <div
-              className="slide-show-directional pointer slide-show-left horizontal-flip"
+              className="slide-show-directional pointer slide-show-left slide-show-up"
               onClick={handleSlideShowLeftClick}
               role="button"
               tabIndex={0}
               onKeyDown={handleKeyDownCapture}
             >
-              ➤
+              <span>▲</span>
             </div>
-            <div className="exhibition-slide-show" ref={exhibitionSlideShowRef}>
+            <div className="exhibition-slide-show-vertical" ref={exhibitionSlideShowRef}>
               {data.showings.map((s, index) => (
                 <div
                   className={`exhibition-slide-show-thumbnail-wrapper pointer ${index === indexOfFocusedImage ? 'focused-image-thumbnail' : ''}`}
@@ -163,13 +165,13 @@ function Exhibition({ data }) {
               ))}
             </div>
             <div
-              className="slide-show-directional pointer slide-show-right"
+              className="slide-show-directional pointer vertical-flip slide-show-right slide-show-down"
               onClick={handleSlideShowRightClick}
               role="button"
               tabIndex={0}
               onKeyDown={handleKeyDownCapture}
             >
-              ➤
+              <span>▲</span>
             </div>
           </div>
         </div>
