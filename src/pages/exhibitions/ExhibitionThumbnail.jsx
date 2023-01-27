@@ -4,7 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import getImagePathByFileName from './getImagePathByFileName';
-// import '../../styles/ExhibitionThumbnail.css';
+import '../../styles/ExhibitionThumbnail.css';
 import '../../styles/fujifilm-square.css';
 
 /**
@@ -40,24 +40,40 @@ function ExhibitionThumbnail({ data }) {
         </div>
       </div>
       <div className="exhibition-info image-info">
-        <div className="progress-status">
-          <u>Status</u>
-          {': '}
-          {data.meta.progressStatus ? data.meta.progressStatus : 'N/A'}
-        </div>
-        <div className="exhibition-release-status">
-          <u>Release Status</u>
-          {': '}
-          {data.meta.releaseStatus ? data.meta.releaseStatus : 'N/A'}
-        </div>
-        <div className="exhibition-release-date">
-          <u>Release Date</u>
-          {': '}
-          {data.meta.releaseDate ? data.meta.releaseDate : 'N/A'}
-        </div>
+        <table className="exhibition-info-table">
+          <tbody>
+            <tr className="progress-status">
+              <td className="exhibition-info-header">
+                <u>Status</u>
+                {': '}
+              </td>
+              <td className="exhibition-info-content">
+                {data.meta.progressStatus ? data.meta.progressStatus : 'N/A'}
+              </td>
+            </tr>
+            <tr className="exhibition-release-status">
+              <td className="exhibition-info-header">
+                <u>Release Status</u>
+                {': '}
+              </td>
+              <td className="exhibition-info-content">
+                {data.meta.releaseStatus ? data.meta.releaseStatus : 'N/A'}
+              </td>
+            </tr>
+            <tr className="exhibition-release-date">
+              <td className="exhibition-info-header">
+                <u>Release Date</u>
+                {': '}
+              </td>
+              <td className="exhibition-info-content">
+                {data.meta.releaseDate ? data.meta.releaseDate : 'N/A'}
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <div className="exhibition-description">
           {data.meta.about}
-          {data.meta.numberOfImages ? ` (${data.meta.numberOfImages} images)` : ''}
+          {data.meta.numberOfImages ? ` (${data.meta.numberOfImages} Images)` : ''}
         </div>
         <br />
         <br />

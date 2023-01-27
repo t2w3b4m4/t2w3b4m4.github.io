@@ -5,7 +5,7 @@ const vol1 = {
     about: 'Stories x Stories',
     numberOfImages: 91,
     progressStatus: 'Completed',
-    releaseStatus: 'Alpha (5 Prints)',
+    releaseStatus: 'Alpha (5 Copies)',
     releaseDate: 'Dec. 09, 2022',
     imageFolderName: 'vol1',
   },
@@ -49,7 +49,7 @@ const vol1 = {
     {
       fileName: '070.JPG',
       displayName: 'Insecurity',
-      description: 'Early morning in the fall, in the parking lot.',
+      description: 'Early morning in the fall in the parking lot.',
     },
     {
       fileName: '084.JPG',
