@@ -1,8 +1,12 @@
 const vol2 = {
   meta: {
     name: 'vol-2',
-    displayName: 'Vol. 2 (Preview)',
+    displayName: 'Vol. 2 Materialism x Love Story (Preview)',
     about: 'Materialism x Love Story',
+    progressStatus: 'Completed',
+    numberOfImages: 88,
+    releaseStatus: '',
+    releaseDate: '',
     imageFolderName: 'vol2',
   },
   showings: [

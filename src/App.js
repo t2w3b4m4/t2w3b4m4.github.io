@@ -16,7 +16,7 @@ function App() {
     <div className="App">
 
       <Router>
-        <div className="logo not-selectable"><a href="/"><img src="/ma-flipped-transparent.png" alt="馬" width={32} /></a></div>
+        <div className="logo not-selectable"><a href="/"><img src="/ma-flipped-transparent.png" alt="馬" width={48} /></a></div>
         <div className="navigation not-selectable">
           <NavigationBar />
         </div>

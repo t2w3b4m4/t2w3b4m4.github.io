@@ -16,8 +16,8 @@
 }
 
 .fujifilm-description {
-  height: calc(86mm - 61mm - 7.8125mm);
-  width: calc(61mm);
+  max-height: calc(86mm - 61mm - 7.8125mm);
+  width: 61mm;
   margin: 0 5mm 7.8125mm 5mm;
   text-align: center;
   overflow: scroll;

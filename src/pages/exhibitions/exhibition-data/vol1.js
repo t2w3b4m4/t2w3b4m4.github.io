@@ -2,7 +2,11 @@ const vol1 = {
   meta: {
     name: 'vol-1',
     displayName: 'Vol. 1 (Preview)',
-    about: '', // 'Stories x Stories',
+    about: 'Stories x Stories',
+    numberOfImages: 91,
+    progressStatus: 'Completed',
+    releaseStatus: 'Alpha (5 Prints)',
+    releaseDate: 'Dec. 09, 2022',
     imageFolderName: 'vol1',
   },
   showings: [

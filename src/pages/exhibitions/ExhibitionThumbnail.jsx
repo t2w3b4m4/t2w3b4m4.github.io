@@ -37,8 +37,30 @@ function ExhibitionThumbnail({ data }) {
         <div className="fujifilm-description">
           {/* <hr /> */}
           <span className="exhibition-name">{data.meta.displayName}</span>
-          <div className="exhibition-description">{data.meta.about}</div>
         </div>
+      </div>
+      <div className="exhibition-info image-info">
+        <div className="progress-status">
+          <u>Status</u>
+          {': '}
+          {data.meta.progressStatus ? data.meta.progressStatus : 'N/A'}
+        </div>
+        <div className="exhibition-release-status">
+          <u>Release Status</u>
+          {': '}
+          {data.meta.releaseStatus ? data.meta.releaseStatus : 'N/A'}
+        </div>
+        <div className="exhibition-release-date">
+          <u>Release Date</u>
+          {': '}
+          {data.meta.releaseDate ? data.meta.releaseDate : 'N/A'}
+        </div>
+        <div className="exhibition-description">
+          {data.meta.about}
+          {data.meta.numberOfImages ? ` (${data.meta.numberOfImages} images)` : ''}
+        </div>
+        <br />
+        <br />
       </div>
     </div>
   );
