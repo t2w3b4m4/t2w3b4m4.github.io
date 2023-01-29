@@ -1,7 +1,7 @@
 const vol2 = {
   meta: {
     name: 'vol-3',
-    displayName: 'Vol. 3 (Teaser)',
+    displayName: '圖文並茂 Vol. 3 (Teaser)',
     about: '',
     progressStatus: 'WIP',
     numberOfImages: 0,

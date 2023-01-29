@@ -42,6 +42,10 @@ a.anchor-hover-black-background-white-text:hover {
   background-color: black;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 /* transformation */
 .horizontal-flip {
   transform: scale(-1, 1);

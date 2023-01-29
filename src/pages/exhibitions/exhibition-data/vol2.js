@@ -1,7 +1,7 @@
 const vol2 = {
   meta: {
     name: 'vol-2',
-    displayName: 'Vol. 2 Materialism x Love Story (Preview)',
+    displayName: '圖文並茂 Vol. 2 (Preview)',
     about: 'Materialism x Love Story',
     progressStatus: 'Completed',
     numberOfImages: 88,

@@ -33,7 +33,12 @@ function Contact() {
       </a>
       <br />
       <br />
-      - mjs
+      <div>
+        -
+        {' '}
+        <span className="inline-block horizontal-flip">馬</span>
+        js
+      </div>
     </div>
   );
 }
