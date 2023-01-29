@@ -3,9 +3,12 @@
 }
 
 .exhibitions {
-  /* width: 450px; */
   margin-top: 12px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.exhibition-links {
+  width: fit-content;
 }

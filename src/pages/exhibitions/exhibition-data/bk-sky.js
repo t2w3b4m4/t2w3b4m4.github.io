@@ -1,23 +1,23 @@
-const vol3 = {
+const bkSky = {
   meta: {
-    name: 'vol-3',
-    displayName: '圖文並茂 Vol. 3 (Teaser)',
+    name: 'bk-sky',
+    displayName: 'Brooklyn Sky (Teaser)',
     about: '',
     progressStatus: 'WIP',
     numberOfImages: 0,
     status: '',
     releaseStatus: '',
     releaseDate: '',
-    imageFolderName: 'vol3',
+    imageFolderName: 'bk-sky',
   },
   showings: [
     {
-      fileName: 'every-flower.jpg',
+      fileName: 'bk-sky-antenna.jpg',
       displayName: 'Untitled',
       description: '',
-      date: '10-15-2022',
+      date: '12-22-2022',
     },
   ],
 };
 
-export default vol3;
+export default bkSky;

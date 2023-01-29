@@ -21,7 +21,7 @@ function Exhibitions() {
         <Route exact path="/exhibitions">
           {
             exhibitions.map((e) => (
-              <div key={`exhibition-link-${e.meta.name}`}>
+              <div className="exhibition-links" key={`exhibition-link-${e.meta.name}`}>
                 <Link className="anchor-hover-no-effect" to={createPath(e.meta.name)}><ExhibitionThumbnail data={e} /></Link>
               </div>
             ))
