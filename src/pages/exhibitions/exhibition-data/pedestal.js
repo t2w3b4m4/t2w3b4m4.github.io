@@ -1,8 +1,14 @@
 const pedestal = {
   meta: {
     name: 'pedestal',
-    about: 'Shifting focus from the main subject to the supporting pedestals',
+    displayName: 'Pedestal',
+    about: '', // 'Shifting focus from the main subject to the supporting pedestals',
     imageFolderName: 'pedestal',
+    progressStatus: 'WIP',
+    numberOfImages: 0,
+    status: '',
+    releaseStatus: '',
+    releaseDate: '',
   },
   showings: [
     {

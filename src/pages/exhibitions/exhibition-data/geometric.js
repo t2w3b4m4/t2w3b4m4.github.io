@@ -2,6 +2,13 @@ const geometric = {
   meta: {
     name: 'geometric',
     about: '',
+    displayName: 'Geometric',
+    progressStatus: 'WIP',
+    numberOfImages: 0,
+    status: '',
+    releaseStatus: '',
+    releaseDate: '',
+    imageFolderName: 'geometric',
   },
   showings: [
     {
@@ -37,7 +44,7 @@ const geometric = {
     {
       fileName: '432-park-ave.jpg',
       name: '432 Park Ave',
-      description: "1%'s height",
+      description: '',
       date: '2021-05-15',
     },
   ],
