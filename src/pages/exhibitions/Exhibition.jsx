@@ -5,6 +5,7 @@
 /* eslint-disable import/no-dynamic-require */
 /* eslint-disable global-require */
 /* eslint-disable react/forbid-prop-types */
+/* eslint-disable no-undef */
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link, useHistory } from 'react-router-dom';
@@ -33,6 +34,9 @@ const ON_HOVER_MOUSE_POINTER_RIGHT_CLASS = 'on-hover-mouse-pointer-right';
  *  ],
  * }
  */
+
+const IMAGE_PARENT_DIV_HTML_ELEMENT_ID = 'displayName';
+
 function Exhibition({ data }) {
   const exhibitionSlideShowRef = useRef(null);
   const numOfImages = data.showings.length;
@@ -68,7 +72,8 @@ function Exhibition({ data }) {
 
     // Show current image in slide show
     // eslint-disable-next-line no-undef
-    document.getElementById(indexOfImage).scrollIntoView();
+    document.getElementById(indexOfImage).scrollIntoView(); // scrolls list of thumbnails
+    document.getElementById(IMAGE_PARENT_DIV_HTML_ELEMENT_ID).scrollIntoView(); // keeps picture in view
   };
 
   const handleSlideShowLeftClick = () => {
@@ -100,8 +105,8 @@ function Exhibition({ data }) {
     if (exhibitionAndFocusedImage.length === 2) {
       const urlIndexOfFocusedImage = parseInt(exhibitionAndFocusedImage[1], 10);
       setIndexOfFocusedImage(urlIndexOfFocusedImage);
-      // eslint-disable-next-line no-undef
-      document.getElementById(urlIndexOfFocusedImage).scrollIntoView();
+      document.getElementById(urlIndexOfFocusedImage).scrollIntoView(); // scrolls list of thumbnails
+      document.getElementById(IMAGE_PARENT_DIV_HTML_ELEMENT_ID).scrollIntoView(); // keeps picture in view
     }
   }, []);
 
@@ -117,6 +122,7 @@ function Exhibition({ data }) {
             className={`focused-content-wrapper fujifilm-body ${mouseHoverPointerClass}`}
             onMouseMove={handleMouseMoveCaptureOnImage}
             onClick={handleImageClick}
+            id={IMAGE_PARENT_DIV_HTML_ELEMENT_ID}
           >
             <img
               className="focused-image fujifilm-photo"
