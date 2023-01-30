@@ -16,7 +16,7 @@ function Contact() {
   }, []);
   return (
     <div className="contact">
-      Hi there, if you have feedback, inquiry,
+      If you have feedback, inquiry,
       {' '}
       <br />
       or, if you just want to say what&apos;s up,
@@ -36,14 +36,14 @@ function Contact() {
           <img alt="email" src={MailIcon} className="email-icon" />
         </span>
       </a>
-      <br />
+      {/* <br />
       <br />
       <div>
         -
         {' '}
         <span className="inline-block horizontal-flip">馬</span>
         js
-      </div>
+      </div> */}
     </div>
   );
 }

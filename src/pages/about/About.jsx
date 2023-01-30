@@ -3,6 +3,7 @@ import ReactGA from 'react-ga4';
 import React, { useEffect } from 'react';
 import { WEB_TITLE } from '../../components/appStrings';
 import './About.css';
+import Contact from '../contact/Contact';
 
 function About() {
   useEffect(() => {
@@ -33,6 +34,9 @@ function About() {
       <div>
         We will be exploring materialism, symbolism, stories, and more. Materialism, in the context of the book, and in a greater scope of philosophy to me, is the idea that all physical objects/matters are intrinsically rational, and their manifestation of emotions were created by the subjectivity of emotional beings, i.e. us humans.
       </div>
+      <br />
+      <hr />
+      <Contact />
       <div>
         <br />
         Have fun.

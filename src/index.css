@@ -12,7 +12,7 @@ body {
   color: #555454;
 
   /* background-color: #f8f8f8; */
-  height: 768px;
+  max-height: 768px;
   overflow: scroll;
 
   /* box-shadow: 8px 3px 8px #888888;

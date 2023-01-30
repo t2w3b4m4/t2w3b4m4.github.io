@@ -8,8 +8,10 @@
 
 .nav-items {
   display: flex;
-  flex-direction: row;
-  gap: 12px;
+  flex-direction: column;
+  margin: 0;
+  gap: 3px;
+  /* flex-direction: row; */
   /* justify-content: space-evenly; */
 }
 
