@@ -9,6 +9,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link, useHistory } from 'react-router-dom';
 import getImagePathByFileName from './getImagePathByFileName';
+import { WEB_TITLE } from '../../components/appStrings';
 import '../../styles/Exhibition.css';
 import '../../styles/fujifilm-square.css';
 
@@ -87,6 +88,11 @@ function Exhibition({ data }) {
   const handleKeyDownCapture = (e) => {
     if (e.key === ' ') { e.target.click(); }
   };
+
+  useEffect(() => {
+    // eslint-disable-next-line no-undef
+    document.title = `${WEB_TITLE} | Exhibition | ${data.meta.displayName}`;
+  }, [data.meta.displayName]);
 
   useEffect(() => {
     // eslint-disable-next-line no-undef

@@ -6,6 +6,7 @@ import {
 import exhibitions from './exhibition-data';
 import Exhibition from './Exhibition';
 import ExhibitionThumbnail from './ExhibitionThumbnail';
+import { WEB_TITLE } from '../../components/appStrings';
 import '../../styles/Exhibitions.css';
 
 const createPath = (name) => `/exhibitions/${name}`.toLocaleLowerCase();
@@ -13,8 +14,14 @@ const createPath = (name) => `/exhibitions/${name}`.toLocaleLowerCase();
 function Exhibitions() {
   useEffect(() => {
     // eslint-disable-next-line no-undef
+    document.title = `${WEB_TITLE} | Exhibitions`;
+  }, []);
+
+  useEffect(() => {
+    // eslint-disable-next-line no-undef
     ReactGA.send(window.location.pathname + window.location.search);
   }, []);
+
   return (
     <div className="exhibitions">
       <Switch>

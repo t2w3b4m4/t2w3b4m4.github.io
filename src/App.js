@@ -1,6 +1,8 @@
 import ReactGA from 'react-ga4';
 import React, { useEffect } from 'react';
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+  HashRouter as Router, Switch, Route, Link,
+} from 'react-router-dom';
 import routes from './routes';
 import './styles/App.css';
 import NotFound from './pages/404';
@@ -16,14 +18,19 @@ function App() {
     <div className="App">
 
       <Router>
-        <div className="logo not-selectable"><a href="/"><img src="/ma-flipped-transparent.png" alt="馬" width={48} /></a></div>
+        <div className="logo not-selectable"><Link to="/"><img src="/ma-flipped-transparent.png" alt="馬" width={48} /></Link></div>
         <div className="navigation not-selectable">
           <NavigationBar />
         </div>
         <div className="app-content">
           <Switch>
             {Object.values(routes).map((r) => (
-              <Route exact={r.path === '/'} path={r.path} component={r.component} key={r.name} />
+              <Route
+                exact={r.path === '/'}
+                path={r.path}
+                component={r.component}
+                key={r.name}
+              />
             ))}
             <Route exact path="/not-found">
               <NotFound />

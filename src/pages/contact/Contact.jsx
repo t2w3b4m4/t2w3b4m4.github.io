@@ -1,10 +1,15 @@
 /* eslint-disable global-require */
 import ReactGA from 'react-ga4';
 import React, { useEffect } from 'react';
+import { WEB_TITLE } from '../../components/appStrings';
 import './Contact.css';
 import MailIcon from './email-icon.png';
 
 function Contact() {
+  useEffect(() => {
+    // eslint-disable-next-line no-undef
+    document.title = `${WEB_TITLE} | Contact`;
+  }, []);
   useEffect(() => {
     // eslint-disable-next-line no-undef
     ReactGA.send(window.location.pathname + window.location.search);

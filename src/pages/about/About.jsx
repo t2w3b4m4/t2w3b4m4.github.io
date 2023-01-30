@@ -1,9 +1,15 @@
 /* eslint-disable max-len */
 import ReactGA from 'react-ga4';
 import React, { useEffect } from 'react';
+import { WEB_TITLE } from '../../components/appStrings';
 import './About.css';
 
 function About() {
+  useEffect(() => {
+    // eslint-disable-next-line no-undef
+    document.title = `${WEB_TITLE} | About`;
+  }, []);
+
   useEffect(() => {
     // eslint-disable-next-line no-undef
     ReactGA.send(window.location.pathname + window.location.search);
