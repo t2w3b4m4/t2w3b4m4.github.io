@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6c356baf.css",
-    "main.js": "/static/js/main.c864dcb6.js",
+    "main.js": "/static/js/main.1b478e2e.js",
     "static/media/every-flower.jpg": "/static/media/every-flower.b7f7dc1fad258825c354.jpg",
     "static/media/087-rooms-by-the-sea.jpg": "/static/media/087-rooms-by-the-sea.bc04b45860f8a1d8c023.jpg",
     "static/media/080-a-song-for-you-1.jpg": "/static/media/080-a-song-for-you-1.dca609543c90e561629b.jpg",
@@ -36,10 +36,10 @@
     "static/media/precarious1.jpg": "/static/media/precarious1.7f20b0f805633a77be7b.jpg",
     "index.html": "/index.html",
     "main.6c356baf.css.map": "/static/css/main.6c356baf.css.map",
-    "main.c864dcb6.js.map": "/static/js/main.c864dcb6.js.map"
+    "main.1b478e2e.js.map": "/static/js/main.1b478e2e.js.map"
   },
   "entrypoints": [
     "static/css/main.6c356baf.css",
-    "static/js/main.c864dcb6.js"
+    "static/js/main.1b478e2e.js"
   ]
 }
