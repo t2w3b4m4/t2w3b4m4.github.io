@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 /* eslint-disable max-len */
 import ReactGA from 'react-ga4';
 import React, { useEffect } from 'react';
@@ -42,10 +43,19 @@ function About() {
         Have fun.
         <br />
         <br />
-        -
-        {' '}
-        <span className="inline-block horizontal-flip">馬</span>
-        js
+        <span>
+          -
+          {' '}
+          {/* <span className="inline-block horizontal-flip">馬</span> */}
+          <span className="in-text-icon">
+            <img
+              src={require('../../ma-flipped-transparent.png')}
+              alt="馬"
+              width="20px"
+            />
+          </span>
+          JS
+        </span>
       </div>
     </div>
   );

@@ -87,3 +87,8 @@ a.anchor-hover-black-background-white-text:hover {
 hr {
   height: 1px;
 }
+
+.in-text-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
