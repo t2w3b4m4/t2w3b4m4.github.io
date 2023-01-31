@@ -6,7 +6,8 @@
     height: 86mm;
     width: 108mm;
     background-color: #f7f5f5;
-    box-shadow: 8px 3px 8px #888888;
+    box-shadow: 6px 3px 6px #888888;
+    z-index: 1;
 }
 
 .fujifilm-photo {
@@ -80,3 +81,10 @@
   .focused-image-thumbnail {
     border-bottom-color: rgb(103, 100, 100) !important;
   }
+
+  .image-info {
+    padding: 12px 3px 12px 3px;
+    display: block;
+    width: calc(108mm - 6px);
+  }
+  
