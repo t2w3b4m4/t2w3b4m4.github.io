@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.99185176.css",
-    "main.js": "/static/js/main.6cc1b1e2.js",
+    "main.css": "/static/css/main.fc80d64d.css",
+    "main.js": "/static/js/main.2663aab3.js",
     "static/media/every-flower.jpg": "/static/media/every-flower.b7f7dc1fad258825c354.jpg",
     "static/media/087-rooms-by-the-sea.jpg": "/static/media/087-rooms-by-the-sea.bc04b45860f8a1d8c023.jpg",
     "static/media/080-a-song-for-you-1.jpg": "/static/media/080-a-song-for-you-1.dca609543c90e561629b.jpg",
@@ -35,11 +35,11 @@
     "static/media/033-your-wife-is-hot.jpeg": "/static/media/033-your-wife-is-hot.72d36bd5e028320f409a.jpeg",
     "static/media/precarious1.jpg": "/static/media/precarious1.7f20b0f805633a77be7b.jpg",
     "index.html": "/index.html",
-    "main.99185176.css.map": "/static/css/main.99185176.css.map",
-    "main.6cc1b1e2.js.map": "/static/js/main.6cc1b1e2.js.map"
+    "main.fc80d64d.css.map": "/static/css/main.fc80d64d.css.map",
+    "main.2663aab3.js.map": "/static/js/main.2663aab3.js.map"
   },
   "entrypoints": [
-    "static/css/main.99185176.css",
-    "static/js/main.6cc1b1e2.js"
+    "static/css/main.fc80d64d.css",
+    "static/js/main.2663aab3.js"
   ]
 }
