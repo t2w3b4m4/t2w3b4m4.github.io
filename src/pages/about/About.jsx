@@ -3,8 +3,9 @@
 import ReactGA from 'react-ga4';
 import React, { useEffect } from 'react';
 import { WEB_TITLE } from '../../components/appStrings';
-import './About.css';
 import Contact from '../contact/Contact';
+import MA_ICON from '../../ma-flipped-transparent.png';
+import './About.css';
 
 function About() {
   useEffect(() => {
@@ -46,10 +47,9 @@ function About() {
         <span>
           -
           {' '}
-          {/* <span className="inline-block horizontal-flip">馬</span> */}
           <span className="in-text-icon">
             <img
-              src={require('../../ma-flipped-transparent.png')}
+              src={MA_ICON}
               alt="馬"
               width="20px"
             />

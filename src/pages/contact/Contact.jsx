@@ -3,7 +3,7 @@ import ReactGA from 'react-ga4';
 import React, { useEffect } from 'react';
 import { WEB_TITLE } from '../../components/appStrings';
 import './Contact.css';
-import MailIcon from './email-icon.png';
+// import MailIcon from './email-icon.png';
 
 function Contact() {
   useEffect(() => {
@@ -30,20 +30,19 @@ function Contact() {
         rel="noopener noreferrer"
         className="anchorHoverNoEffect"
       >
-        email me
-        {' '}
-        <span className="in-text-icon">
-          <img alt="email" src={MailIcon} className="email-icon" />
+        <span>
+          email me at
+          {' '}
+          <u><i>twbm.site&#64;gmail.com</i></u>
+          {/* <span className="in-text-icon">
+            <img
+              alt="email"
+              src={MailIcon}
+              className="email-icon"
+            />
+          </span> */}
         </span>
       </a>
-      {/* <br />
-      <br />
-      <div>
-        -
-        {' '}
-        <span className="inline-block horizontal-flip">馬</span>
-        js
-      </div> */}
     </div>
   );
 }
