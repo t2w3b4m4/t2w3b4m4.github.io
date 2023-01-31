@@ -2,7 +2,7 @@ const vol1 = {
   meta: {
     name: 'vol-1',
     displayName: '圖文並茂 Vol. 1 (Preview)',
-    about: 'Stories x Stories',
+    about: '', // 'Stories x Stories',
     numberOfImages: 91,
     progressStatus: 'Completed',
     releaseStatus: 'Alpha (5 Copies)',
