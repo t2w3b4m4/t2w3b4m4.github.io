@@ -19,6 +19,7 @@ function NavigationBar() {
               to={r.path}
               className={`anchor-hover-black-background-white-text ${r.name === nameOfCurrentPath ? 'current-focused-path' : ''}`}
               onClick={handlePathClick(r.name)}
+              hidden={r.name === 'Tools'}
             >
               <span>{r.name}</span>
             </Link>
