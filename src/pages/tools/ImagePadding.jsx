@@ -1,11 +1,15 @@
 /* eslint-disable no-undef */
 import React, { useEffect, useRef, useState } from 'react';
 
+const FULL_HEIGHT = 1;
+const FULL_HEIGHT_105 = 1.05;
+
 function ImagePadding() {
   const canvasRef = useRef(null);
   const [image, setImage] = useState(null);
+  const [paddingSize, setPaddingSize] = useState(FULL_HEIGHT);
 
-  function handleFileChange(event) {
+  const handleFileChange = (event) => {
     // Get the file from the input element
     const file = event.target.files[0];
 
@@ -20,9 +24,9 @@ function ImagePadding() {
 
     // Read the file as a data URI
     reader.readAsDataURL(file);
-  }
+  };
 
-  function handleSave() {
+  const handleSave = () => {
     // Get the canvas and context
     const canvas = canvasRef.current;
 
@@ -43,7 +47,11 @@ function ImagePadding() {
 
     // Click the link to download the image
     link.click();
-  }
+  };
+
+  const handlePaddingSizeSelect = (e) => {
+    setPaddingSize(parseFloat(e.target.value, 10));
+  };
 
   useEffect(() => {
     // Get the canvas and context
@@ -58,7 +66,7 @@ function ImagePadding() {
       const { width, height } = img;
 
       // Calculate the size of the background
-      const bgSize = Math.max(width, height) * 1.05;
+      const bgSize = Math.max(width, height) * paddingSize;
 
       // Set the size of the canvas
       canvas.width = bgSize;
@@ -76,12 +84,24 @@ function ImagePadding() {
       // Draw the image onto the canvas
       ctx.drawImage(img, x, y);
     };
-  }, [image]);
+  }, [image, paddingSize]);
 
   return (
     <>
       <h3>Save image with white padding</h3>
       <input type="file" onChange={handleFileChange} />
+      <div>
+        <div>
+          0% Padding:
+          {' '}
+          <input type="radio" value={FULL_HEIGHT} onChange={handlePaddingSizeSelect} checked={paddingSize === FULL_HEIGHT} />
+        </div>
+        <div>
+          5% Padding:
+          {' '}
+          <input type="radio" value={FULL_HEIGHT_105} onChange={handlePaddingSizeSelect} checked={paddingSize === FULL_HEIGHT_105} />
+        </div>
+      </div>
       <button type="button" onClick={handleSave} disabled={image === null}>Save</button>
       <canvas ref={canvasRef} />
     </>
