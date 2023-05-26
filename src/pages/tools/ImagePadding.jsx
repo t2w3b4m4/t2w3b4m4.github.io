@@ -3,11 +3,14 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const FULL_HEIGHT = 1;
 const FULL_HEIGHT_105 = 1.05;
+const DEFAULT_FILL_STYLE = 'white';
+const FILL_STYLE_BLACK = 'black';
 
 function ImagePadding() {
   const canvasRef = useRef(null);
   const [image, setImage] = useState(null);
   const [paddingSize, setPaddingSize] = useState(FULL_HEIGHT);
+  const [fillStyle, setFillStyle] = useState(DEFAULT_FILL_STYLE);
 
   const handleFileChange = (event) => {
     // Get the file from the input element
@@ -26,12 +29,16 @@ function ImagePadding() {
     reader.readAsDataURL(file);
   };
 
-  const handleSave = () => {
+  const handleSave = (fractionOfSizeToSave = 1) => () => {
     // Get the canvas and context
     const canvas = canvasRef.current;
 
+    let actualFractionOfSizeToSave = 1;
     // Get the image data as a data URI
-    const blobURL = canvas.toDataURL('image/jpeg');
+    if (fractionOfSizeToSave <= 1 && fractionOfSizeToSave >= 0) {
+      actualFractionOfSizeToSave = fractionOfSizeToSave;
+    }
+    const blobURL = canvas.toDataURL('image/jpeg', actualFractionOfSizeToSave);
 
     // Create a blob URL
     // const blobURL = URL.createObjectURL(dataURI);
@@ -51,6 +58,9 @@ function ImagePadding() {
 
   const handlePaddingSizeSelect = (e) => {
     setPaddingSize(parseFloat(e.target.value, 10));
+  };
+  const handleFillStyleSelect = (e) => {
+    setFillStyle(e.target.value);
   };
 
   useEffect(() => {
@@ -74,7 +84,7 @@ function ImagePadding() {
 
       // Clear the canvas
       ctx.clearRect(0, 0, bgSize, bgSize);
-      ctx.fillStyle = 'white';
+      ctx.fillStyle = fillStyle;
       ctx.fillRect(0, 0, bgSize, bgSize);
 
       // Calculate the position of the image
@@ -84,13 +94,14 @@ function ImagePadding() {
       // Draw the image onto the canvas
       ctx.drawImage(img, x, y);
     };
-  }, [image, paddingSize]);
+  }, [image, paddingSize, fillStyle]);
 
   return (
     <>
       <h3>Save image with white padding</h3>
       <input type="file" onChange={handleFileChange} />
       <div>
+        <hr />
         <div>
           0% Padding:
           {' '}
@@ -101,8 +112,21 @@ function ImagePadding() {
           {' '}
           <input type="radio" value={FULL_HEIGHT_105} onChange={handlePaddingSizeSelect} checked={paddingSize === FULL_HEIGHT_105} />
         </div>
+        <hr />
+        <div>
+          White Padding:
+          {' '}
+          <input type="radio" value={DEFAULT_FILL_STYLE} onChange={handleFillStyleSelect} checked={fillStyle === DEFAULT_FILL_STYLE} />
+        </div>
+        <div>
+          Black Padding:
+          {' '}
+          <input type="radio" value={FILL_STYLE_BLACK} onChange={handleFillStyleSelect} checked={fillStyle === FILL_STYLE_BLACK} />
+        </div>
+        <hr />
       </div>
-      <button type="button" onClick={handleSave} disabled={image === null}>Save</button>
+      <button type="button" onClick={handleSave(1)} disabled={image === null}>Save (Actual Size)</button>
+      <button type="button" onClick={handleSave(0.7)} disabled={image === null}>Save (70% of Original Size)</button>
       <canvas ref={canvasRef} />
     </>
   );
