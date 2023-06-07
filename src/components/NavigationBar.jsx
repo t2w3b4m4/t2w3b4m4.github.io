@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import routes from '../routes';
 import '../styles/NavigationBar.css';
 
+const HIDDEN_ROUTES = new Set(['/__tools__', '/__colors__']);
+
 function NavigationBar() {
   // TODO: look at current path and set default
   const [nameOfCurrentPath, setNameOfCurrentPath] = useState('home');
@@ -19,9 +21,11 @@ function NavigationBar() {
               to={r.path}
               className={`anchor-hover-black-background-white-text ${r.name === nameOfCurrentPath ? 'current-focused-path' : ''}`}
               onClick={handlePathClick(r.name)}
-              hidden={r.name === 'Tools'}
+              hidden={HIDDEN_ROUTES.has(r.path)}
             >
-              <span>{r.name}</span>
+              <span>
+                {r.name}
+              </span>
             </Link>
           </li>
         ))}

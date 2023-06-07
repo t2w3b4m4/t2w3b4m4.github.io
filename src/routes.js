@@ -3,6 +3,7 @@ import {
   About,
   Exhibitions,
   Tools,
+  ADictionaryOfColorCombinations,
 } from './pages';
 
 export default {
@@ -10,4 +11,5 @@ export default {
   about: { path: '/about', name: 'About', component: About },
   exhibitions: { path: '/exhibitions', name: 'Exhibitions', component: Exhibitions },
   tools: { path: '/__tools__', name: 'Tools', component: Tools },
+  colors: { path: '/__colors__', name: 'A Dictionary of Color Combinations', component: ADictionaryOfColorCombinations },
 };
