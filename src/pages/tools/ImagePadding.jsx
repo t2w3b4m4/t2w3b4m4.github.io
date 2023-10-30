@@ -8,8 +8,10 @@ const FILL_STYLE_BLACK = 'black';
 
 function ImagePadding() {
   const canvasRef = useRef(null);
+  const [squaredBackground, setSquaredBackground] = useState(true);
   const [image, setImage] = useState(null);
-  const [paddingSize, setPaddingSize] = useState(FULL_HEIGHT);
+  const [paddingRatio, setPaddingRatio] = useState(FULL_HEIGHT);
+  const [customPaddingRatio, setCustomPaddingRatio] = useState(0);
   const [fillStyle, setFillStyle] = useState(DEFAULT_FILL_STYLE);
 
   const handleFileChange = (event) => {
@@ -56,9 +58,20 @@ function ImagePadding() {
     link.click();
   };
 
-  const handlePaddingSizeSelect = (e) => {
-    setPaddingSize(parseFloat(e.target.value, 10));
+  const handleToggleSquaredBackground = (e) => {
+    setSquaredBackground(e.target.checked);
   };
+
+  const handlePaddingRatioSelect = (e) => {
+    setPaddingRatio(parseFloat(e.target.value, 10));
+  };
+
+  const handlePaddingRatioInput = (e) => {
+    const value = parseFloat(e.target.value, 10);
+    setCustomPaddingRatio(value);
+    setPaddingRatio(value / 100.0 + 1.0);
+  };
+
   const handleFillStyleSelect = (e) => {
     setFillStyle(e.target.value);
   };
@@ -75,42 +88,59 @@ function ImagePadding() {
       // Get the size of the image
       const { width, height } = img;
 
-      // Calculate the size of the background
-      const bgSize = Math.max(width, height) * paddingSize;
+      if (squaredBackground) {
+        // Calculate the size of the background
+        const bgSize = Math.max(width, height) * paddingRatio;
 
-      // Set the size of the canvas
-      canvas.width = bgSize;
-      canvas.height = bgSize;
+        // Set the size of the canvas
+        canvas.width = bgSize;
+        canvas.height = bgSize;
+      } else {
+        const padding = Math.max(width * paddingRatio - canvas.width, height * paddingRatio - canvas.height);
+        // Set the size of the canvas
+        canvas.width = width + padding;
+        canvas.height = height + padding;
+      }
 
       // Clear the canvas
-      ctx.clearRect(0, 0, bgSize, bgSize);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = fillStyle;
-      ctx.fillRect(0, 0, bgSize, bgSize);
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Calculate the position of the image
-      const x = (bgSize - width) / 2;
-      const y = (bgSize - height) / 2;
+      const x = (canvas.width - width) / 2;
+      const y = (canvas.height - height) / 2;
 
       // Draw the image onto the canvas
       ctx.drawImage(img, x, y);
     };
-  }, [image, paddingSize, fillStyle]);
+  }, [image, paddingRatio, fillStyle, squaredBackground]);
 
   return (
     <>
       <h3>Save image with white padding</h3>
       <input type="file" onChange={handleFileChange} />
       <div>
+
+        <hr />
+        Squared Background:
+        {' '}
+        <input type="checkbox" checked={squaredBackground} onChange={handleToggleSquaredBackground} />
         <hr />
         <div>
           0% Padding:
           {' '}
-          <input type="radio" value={FULL_HEIGHT} onChange={handlePaddingSizeSelect} checked={paddingSize === FULL_HEIGHT} />
+          <input type="radio" value={FULL_HEIGHT} onChange={handlePaddingRatioSelect} checked={paddingRatio === FULL_HEIGHT} />
         </div>
         <div>
           5% Padding:
           {' '}
-          <input type="radio" value={FULL_HEIGHT_105} onChange={handlePaddingSizeSelect} checked={paddingSize === FULL_HEIGHT_105} />
+          <input type="radio" value={FULL_HEIGHT_105} onChange={handlePaddingRatioSelect} checked={paddingRatio === FULL_HEIGHT_105} />
+        </div>
+        <div>
+          Custom (% of image size) Padding:
+          {' '}
+          <input type="number" value={customPaddingRatio} onChange={handlePaddingRatioInput} />
         </div>
         <hr />
         <div>
