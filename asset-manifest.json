@@ -1,16 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.b20d7449.css",
-    "main.js": "/static/js/main.b0a16d3d.js",
+    "main.js": "/static/js/main.c8a5a04e.js",
     "static/media/every-flower.jpg": "/static/media/every-flower.b7f7dc1fad258825c354.jpg",
     "static/media/087-rooms-by-the-sea.jpg": "/static/media/087-rooms-by-the-sea.bc04b45860f8a1d8c023.jpg",
     "static/media/080-a-song-for-you-1.jpg": "/static/media/080-a-song-for-you-1.dca609543c90e561629b.jpg",
+    "static/media/finale.jpg": "/static/media/finale.e0f86de6c069852a1413.jpg",
+    "static/media/untitled.jpg": "/static/media/untitled.7cf12f059cf02253b632.jpg",
     "static/media/009-love-one-another.jpg": "/static/media/009-love-one-another.dc6318554b69357d0436.jpg",
     "static/media/012-pre-lock-down.jpg": "/static/media/012-pre-lock-down.e3044ef1da89dbe2e018.jpg",
     "static/media/088-self-writing-story.jpg": "/static/media/088-self-writing-story.6b85b0c7c9e41621045a.jpg",
     "static/media/040-the-most-magical-place-on-earth.jpeg": "/static/media/040-the-most-magical-place-on-earth.bf6b07a095d006b8e860.jpeg",
     "static/media/055-wish-no-1.jpeg": "/static/media/055-wish-no-1.9e3f23582aa4d0dbaa1e.jpeg",
     "static/media/top-of-the-rock.jpg": "/static/media/top-of-the-rock.f157660203d973bcd068.jpg",
+    "static/media/magnolia.jpg": "/static/media/magnolia.23fffcb4374a3f8e135d.jpg",
     "static/media/bk-sky-antenna.jpg": "/static/media/bk-sky-antenna.261310212d9eb30eb828.jpg",
     "static/media/084.JPG": "/static/media/084.86b92a89ae484f02c5e3.JPG",
     "static/media/018-blasphemy.jpeg": "/static/media/018-blasphemy.d7d8383e405b73f92e1d.jpeg",
@@ -19,6 +22,7 @@
     "static/media/070.JPG": "/static/media/070.22c88813085ed098adb8.JPG",
     "static/media/064.JPG": "/static/media/064.4124d8e5e3a06f5ee6d9.JPG",
     "static/media/050.JPG": "/static/media/050.19cce65ab3b77bf573ff.JPG",
+    "static/media/smog.jpg": "/static/media/smog.f5dd275b99e9ed783fa0.jpg",
     "static/media/094.JPG": "/static/media/094.d652ecf4f73640978312.JPG",
     "static/media/002-edited.jpeg": "/static/media/002-edited.b1720504b24eba5a7fc5.jpeg",
     "static/media/009-intimacy-in-the-open.jpeg": "/static/media/009-intimacy-in-the-open.6587c89d84ed70206468.jpeg",
@@ -36,10 +40,10 @@
     "static/media/precarious1.jpg": "/static/media/precarious1.7f20b0f805633a77be7b.jpg",
     "index.html": "/index.html",
     "main.b20d7449.css.map": "/static/css/main.b20d7449.css.map",
-    "main.b0a16d3d.js.map": "/static/js/main.b0a16d3d.js.map"
+    "main.c8a5a04e.js.map": "/static/js/main.c8a5a04e.js.map"
   },
   "entrypoints": [
     "static/css/main.b20d7449.css",
-    "static/js/main.b0a16d3d.js"
+    "static/js/main.c8a5a04e.js"
   ]
 }
