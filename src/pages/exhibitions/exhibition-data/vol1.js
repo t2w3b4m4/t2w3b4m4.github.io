@@ -5,9 +5,9 @@ const vol1 = {
     about: '', // 'Stories x Stories',
     numberOfImages: 91,
     progressStatus: 'Completed',
-    releaseStatus: 'Alpha (5 Copies)',
+    releaseStatus: 'Archived',
     releaseDate: 'Dec. 09, 2022',
-    imageFolderName: 'vol1',
+    imageFolderName: 'twbm-vol-1-2',
   },
   showings: [
     {

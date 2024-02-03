@@ -114,7 +114,18 @@ function Exhibition({ data }) {
     <div className="exhibition">
       <div className="exhibition-header">
         <div className="exhibition-name">{data.meta.displayName}</div>
-        <div className="exhibition-discription">{data.meta.about}</div>
+        {/* <div className="exhibition-discription">{data.meta.about}</div> */}
+        {
+          data.meta.link ? (
+            <div>
+              <u>Purchase here</u>
+              {': '}
+              <a href={data.meta.link} target="_blank" rel="noreferrer">🔗</a>
+            </div>
+          ) : ''
+        }
+        <br />
+        <br />
       </div>
       <div className="exhibition-body">
         <div className="exhibition-image-wrapper not-selectable">

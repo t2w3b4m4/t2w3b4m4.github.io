@@ -23,18 +23,13 @@ function About() {
         What is this?
       </h3>
       <div>
-        It is a collection of a variety of things that I see beauty in: things I saw, experienced, owned, and created; and things that have story and meaning to me. Though part of the collections may be abstract and conceptual, they are all pieces of materialized memories that I find beautiful, and I wanted to share them in the hope that they can provide inspiration, comfort, or whatever positive energy the audiences perceive.
+        This is 圖文並茂, but more on this later. Superficially, this is a little collection of selected cherishable snippets of my past life—mementos of sights seen and things I created. I&apos;m sharing them with you, hoping they might spark a memory, maybe even light a creative fire in you. Whatever it is, if it makes you feel a little lighter or inspired, then that&apos;s my magic trick.
       </div>
       <h3>What is 圖文並茂?</h3>
       <div>
-        圖(tú)文(wén)並(bìng)茂(mào) (
-        <i>twbm</i>
-        {' '}
-        for short) is an idiom in Chinese, and it means the text and visual contents are complementing each other well and both are excellent. I see my collection of works as 圖文並茂, hence the title.
-      </div>
-      <h3>What to expect?</h3>
-      <div>
-        We will be exploring materialism, symbolism, stories, and more. Materialism, in the context of the book, and in a greater scope of philosophy to me, is the idea that all physical objects/matters are intrinsically rational, and their manifestation of emotions were created by the subjectivity of emotional beings, i.e. us humans.
+        圖(tú)文(wén)並(bìng)茂(mào) is a Chinese idiom that describes a situation where the text and visual elements of a piece of communication complement each other perfectly, both in quality and effect.
+        Imagine a poem where the evocative imagery mirrors the emotions expressed in the verses, or a movie poster that captures the essence of the film&apos;s narrative in a single striking image.
+        This harmonious interplay between text and visuals elevates the overall experience. I use the term 圖文並茂 (from now on, &quot;TWBM&quot;) as a concept to infuse each piece in my collection with its essence, allowing them to transcend their individual components. TWBM, to me, as a concept, isn&apos;t merely text or visuals; it&apos;s a fusion where words spark vivid mental images, while visuals echo the narrative&apos;s emotional depth.
       </div>
       <br />
       <hr />

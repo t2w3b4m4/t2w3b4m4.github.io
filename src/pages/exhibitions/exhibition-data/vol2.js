@@ -5,9 +5,9 @@ const vol2 = {
     about: '', // 'Materialism x Love Story',
     progressStatus: 'Completed',
     numberOfImages: 88,
-    releaseStatus: '',
-    releaseDate: '',
-    imageFolderName: 'vol2',
+    releaseStatus: 'Archived',
+    releaseDate: 'N/A',
+    imageFolderName: 'twbm-vol-1-2',
   },
   showings: [
     {
