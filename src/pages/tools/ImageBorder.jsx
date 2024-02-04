@@ -1,17 +1,21 @@
 /* eslint-disable no-undef */
 import React, { useEffect, useRef, useState } from 'react';
+import './ImageBorder.css';
 
 const FULL_HEIGHT = 1;
+const FULL_HEIGHT_102 = 1.02;
+const FULL_HEIGHT_103 = 1.03;
 const FULL_HEIGHT_105 = 1.05;
 const DEFAULT_FILL_STYLE = 'white';
 const FILL_STYLE_BLACK = 'black';
 
-function ImagePadding() {
+function ImageBorder() {
   const canvasRef = useRef(null);
-  const [squaredBackground, setSquaredBackground] = useState(true);
+  const [squaredBackground, setSquaredBackground] = useState(false);
   const [image, setImage] = useState(null);
-  const [paddingRatio, setPaddingRatio] = useState(FULL_HEIGHT);
-  const [customPaddingRatio, setCustomPaddingRatio] = useState(0);
+  const [borderRatio, setBorderRatio] = useState(FULL_HEIGHT);
+  const [customBorderRatio, setCustomBorderRatio] = useState(0);
+  const [useCustomBorderRatio, setUseCustomBorderRatio] = useState(false);
   const [fillStyle, setFillStyle] = useState(DEFAULT_FILL_STYLE);
 
   const handleFileChange = (event) => {
@@ -62,14 +66,24 @@ function ImagePadding() {
     setSquaredBackground(e.target.checked);
   };
 
+  const handleToggleUseCustomBorderRatio = (e) => {
+    const { checked } = e.target;
+    setUseCustomBorderRatio(checked);
+    if (checked) {
+      setBorderRatio(customBorderRatio);
+    }
+  };
+
   const handlePaddingRatioSelect = (e) => {
-    setPaddingRatio(parseFloat(e.target.value, 10));
+    setBorderRatio(parseFloat(e.target.value, 10));
   };
 
   const handlePaddingRatioInput = (e) => {
     const value = parseFloat(e.target.value, 10);
-    setCustomPaddingRatio(value);
-    setPaddingRatio(value / 100.0 + 1.0);
+    if (value >= 1 && value <= 20) {
+      setCustomBorderRatio(value);
+      setBorderRatio(value / 100.0 + 1.0);
+    }
   };
 
   const handleFillStyleSelect = (e) => {
@@ -90,16 +104,16 @@ function ImagePadding() {
 
       if (squaredBackground) {
         // Calculate the size of the background
-        const bgSize = Math.max(width, height) * paddingRatio;
+        const bgSize = Math.max(width, height) * borderRatio;
 
         // Set the size of the canvas
         canvas.width = bgSize;
         canvas.height = bgSize;
       } else {
-        const padding = Math.max(width * paddingRatio - canvas.width, height * paddingRatio - canvas.height);
+        const borderSize = Math.max(width * borderRatio - width, height * borderRatio - height);
         // Set the size of the canvas
-        canvas.width = width + padding;
-        canvas.height = height + padding;
+        canvas.width = width + borderSize;
+        canvas.height = height + borderSize;
       }
 
       // Clear the canvas
@@ -114,42 +128,57 @@ function ImagePadding() {
       // Draw the image onto the canvas
       ctx.drawImage(img, x, y);
     };
-  }, [image, paddingRatio, fillStyle, squaredBackground]);
+  }, [image, borderRatio, fillStyle, squaredBackground]);
 
   return (
     <>
-      <h3>Save image with white padding</h3>
+      <h3>Save image with border</h3>
       <input type="file" onChange={handleFileChange} />
       <div>
 
         <hr />
-        Squared Background:
+        <div>
+          <b>Squared Background:</b>
+          {' '}
+          <input type="checkbox" checked={squaredBackground} onChange={handleToggleSquaredBackground} />
+        </div>
+        <hr />
+        <div>
+          <b>(% of image size) Border</b>
+        </div>
+        Use Custom Border:
         {' '}
-        <input type="checkbox" checked={squaredBackground} onChange={handleToggleSquaredBackground} />
+        <input type="checkbox" checked={useCustomBorderRatio} onChange={handleToggleUseCustomBorderRatio} />
+        <div hidden={useCustomBorderRatio}>
+          <div>
+            2%:
+            {' '}
+            <input type="radio" value={FULL_HEIGHT_102} onChange={handlePaddingRatioSelect} checked={borderRatio === FULL_HEIGHT_102} />
+          </div>
+          <div>
+            3%:
+            {' '}
+            <input type="radio" value={FULL_HEIGHT_103} onChange={handlePaddingRatioSelect} checked={borderRatio === FULL_HEIGHT_103} />
+          </div>
+          <div>
+            5%:
+            {' '}
+            <input type="radio" value={FULL_HEIGHT_105} onChange={handlePaddingRatioSelect} checked={borderRatio === FULL_HEIGHT_105} />
+          </div>
+        </div>
+        <div hidden={!useCustomBorderRatio}>
+          Custom %:
+          {' '}
+          <input disabled={!useCustomBorderRatio} type="number" value={customBorderRatio} onChange={handlePaddingRatioInput} />
+        </div>
         <hr />
         <div>
-          0% Padding:
-          {' '}
-          <input type="radio" value={FULL_HEIGHT} onChange={handlePaddingRatioSelect} checked={paddingRatio === FULL_HEIGHT} />
-        </div>
-        <div>
-          5% Padding:
-          {' '}
-          <input type="radio" value={FULL_HEIGHT_105} onChange={handlePaddingRatioSelect} checked={paddingRatio === FULL_HEIGHT_105} />
-        </div>
-        <div>
-          Custom (% of image size) Padding:
-          {' '}
-          <input type="number" value={customPaddingRatio} onChange={handlePaddingRatioInput} />
-        </div>
-        <hr />
-        <div>
-          White Padding:
+          White Border:
           {' '}
           <input type="radio" value={DEFAULT_FILL_STYLE} onChange={handleFillStyleSelect} checked={fillStyle === DEFAULT_FILL_STYLE} />
         </div>
         <div>
-          Black Padding:
+          Black Border:
           {' '}
           <input type="radio" value={FILL_STYLE_BLACK} onChange={handleFillStyleSelect} checked={fillStyle === FILL_STYLE_BLACK} />
         </div>
@@ -157,9 +186,9 @@ function ImagePadding() {
       </div>
       <button type="button" onClick={handleSave(1)} disabled={image === null}>Save (Actual Size)</button>
       <button type="button" onClick={handleSave(0.7)} disabled={image === null}>Save (70% of Original Size)</button>
-      <canvas ref={canvasRef} />
+      <canvas ref={canvasRef} className="canvas" />
     </>
   );
 }
 
-export default ImagePadding;
+export default ImageBorder;

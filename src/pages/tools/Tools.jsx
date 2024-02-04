@@ -1,10 +1,10 @@
 import React from 'react';
-import ImagePadding from './ImagePadding';
+import ImageBorder from './ImageBorder';
 
 function Tools() {
   return (
     <div className="tools">
-      <ImagePadding />
+      <ImageBorder />
     </div>
   );
 }
