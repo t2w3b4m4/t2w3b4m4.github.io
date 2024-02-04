@@ -3,7 +3,7 @@
 }
 
 .typewriter #hello-world {
-  font-family: PressStart2P;
+  /* font-family: PressStart2P; */
 
   /* Ensures the content is not revealed until the animation */
   overflow: hidden; 
@@ -29,4 +29,9 @@
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: silver; }
+}
+
+#tools-link {
+  position: absolute;
+  bottom: 24px;
 }
