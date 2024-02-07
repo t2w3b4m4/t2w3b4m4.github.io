@@ -1,9 +1,11 @@
+import { ProgressStatus } from '../constants';
+
 const vol2 = {
   meta: {
     name: 'vol-2',
     displayName: '圖文並茂 Vol. 2 (Preview)',
     about: '', // 'Materialism x Love Story',
-    progressStatus: 'Completed',
+    progressStatus: ProgressStatus.ARCHIVED,
     numberOfImages: 88,
     releaseStatus: 'Archived',
     releaseDate: 'N/A',

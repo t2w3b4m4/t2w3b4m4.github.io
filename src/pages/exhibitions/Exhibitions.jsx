@@ -8,6 +8,8 @@ import Exhibition from './Exhibition';
 import ExhibitionThumbnail from './ExhibitionThumbnail';
 import { WEB_TITLE } from '../../components/appStrings';
 import '../../styles/Exhibitions.css';
+import routes from '../../routes';
+import { ProgressStatus } from './constants';
 
 const createPath = (name) => `/exhibitions/${name}`.toLocaleLowerCase();
 
@@ -25,13 +27,32 @@ function Exhibitions() {
   return (
     <div className="exhibitions">
       <Switch>
-        <Route exact path="/exhibitions">
+        <Route exact path={routes.exhibitions.path}>
           {
-            exhibitions.map((e) => (
-              <div className="exhibition-links" key={`exhibition-link-${e.meta.name}`}>
-                <Link className="anchor-hover-no-effect" to={createPath(e.meta.name)}><ExhibitionThumbnail data={e} /></Link>
-              </div>
-            ))
+            exhibitions.reduce((filtered, e) => {
+              if (e.meta.progressStatus !== ProgressStatus.ARCHIVED) {
+                filtered.push(
+                  <div className="exhibition-links" key={`exhibition-link-${e.meta.name}`}>
+                    <Link className="anchor-hover-no-effect" to={createPath(e.meta.name)}><ExhibitionThumbnail data={e} /></Link>
+                  </div>,
+                );
+              }
+              return filtered;
+            }, [])
+          }
+        </Route>
+        <Route exact path={routes.archives.path}>
+          {
+            exhibitions.reduce((filtered, e) => {
+              if (e.meta.progressStatus === ProgressStatus.ARCHIVED) {
+                filtered.push(
+                  <div className="exhibition-links" key={`exhibition-link-${e.meta.name}`}>
+                    <Link className="anchor-hover-no-effect" to={createPath(e.meta.name)}><ExhibitionThumbnail data={e} /></Link>
+                  </div>,
+                );
+              }
+              return filtered;
+            }, [])
           }
         </Route>
 

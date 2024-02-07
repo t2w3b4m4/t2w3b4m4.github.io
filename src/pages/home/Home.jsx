@@ -24,10 +24,15 @@ function Home() {
         <h3 id="hello-world">Hello World!</h3>
       </div>
 
-      <div>
+      <div id="tools-link">
         <Link
           to={routes.tools.path}
-          id="tools-link"
+        >
+          <span>⚙️</span>
+        </Link>
+        {' '}
+        <Link
+          to={routes.colors.path}
         >
           <span>⚙️</span>
         </Link>

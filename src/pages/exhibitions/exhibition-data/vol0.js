@@ -1,11 +1,13 @@
+import { ProgressStatus } from '../constants';
+
 const vol0 = {
   meta: {
     name: 'vol-0',
     displayName: '圖文並茂 Vol. 0 (Preview)',
     about: '',
     numberOfImages: 84,
-    progressStatus: 'Completed',
-    releaseStatus: 'Shipping',
+    progressStatus: ProgressStatus.RELEASED,
+    // releaseStatus: 'Shipping',
     releaseDate: 'Jan. 23, 2023',
     imageFolderName: 'twbm-vol-1-2',
     link: 'https://mixam.com/print-on-demand/658db1e95dddc94c958b7523',

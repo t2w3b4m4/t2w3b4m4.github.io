@@ -1,9 +1,11 @@
+import { ProgressStatus } from '../constants';
+
 const geometric = {
   meta: {
     name: 'geometric',
     about: '',
     displayName: 'Geometric',
-    progressStatus: 'WIP',
+    progressStatus: ProgressStatus.IN_PROGRESS,
     numberOfImages: 0,
     status: '',
     releaseStatus: '',

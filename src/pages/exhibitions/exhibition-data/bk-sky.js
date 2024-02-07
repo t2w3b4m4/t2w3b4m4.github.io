@@ -1,9 +1,11 @@
+import { ProgressStatus } from '../constants';
+
 const bkSky = {
   meta: {
     name: 'bk-sky',
     displayName: 'Brooklyn Sky (Preview)',
     about: '',
-    progressStatus: 'Completed',
+    progressStatus: ProgressStatus.ARCHIVED,
     numberOfImages: 34,
     releaseStatus: 'Archived',
     releaseDate: 'Oct. 15, 2023',

@@ -1,9 +1,11 @@
+import { ProgressStatus } from '../constants';
+
 const precarious = {
   meta: {
     name: 'precarious',
     displayName: 'Precarious',
     about: '',
-    progressStatus: 'WIP',
+    progressStatus: ProgressStatus.IN_PROGRESS,
     numberOfImages: 0,
     status: '',
     releaseStatus: '',

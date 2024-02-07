@@ -51,7 +51,7 @@ function ExhibitionThumbnail({ data }) {
                 {data.meta.progressStatus ? data.meta.progressStatus : 'N/A'}
               </td>
             </tr>
-            <tr className="exhibition-release-status">
+            {/* <tr className="exhibition-release-status">
               <td className="exhibition-info-header">
                 <u>Release Status</u>
                 {': '}
@@ -59,7 +59,7 @@ function ExhibitionThumbnail({ data }) {
               <td className="exhibition-info-content">
                 {data.meta.releaseStatus ? data.meta.releaseStatus : 'N/A'}
               </td>
-            </tr>
+            </tr> */}
             <tr className="exhibition-release-date">
               <td className="exhibition-info-header">
                 <u>Release Date</u>

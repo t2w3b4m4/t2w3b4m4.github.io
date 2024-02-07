@@ -1,10 +1,12 @@
+import { ProgressStatus } from '../constants';
+
 const pedestal = {
   meta: {
     name: 'pedestal',
     displayName: 'Pedestal',
     about: '', // 'Shifting focus from the main subject to the supporting pedestals',
     imageFolderName: 'pedestal',
-    progressStatus: 'WIP',
+    progressStatus: ProgressStatus.IN_PROGRESS,
     numberOfImages: 0,
     status: '',
     releaseStatus: '',

@@ -1,10 +1,12 @@
+import { ProgressStatus } from '../constants';
+
 const vol1 = {
   meta: {
     name: 'vol-1',
     displayName: '圖文並茂 Vol. 1 (Preview)',
     about: '', // 'Stories x Stories',
     numberOfImages: 91,
-    progressStatus: 'Completed',
+    progressStatus: ProgressStatus.ARCHIVED,
     releaseStatus: 'Archived',
     releaseDate: 'Dec. 09, 2022',
     imageFolderName: 'twbm-vol-1-2',
