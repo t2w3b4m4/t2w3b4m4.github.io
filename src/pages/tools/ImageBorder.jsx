@@ -80,7 +80,7 @@ function ImageBorder() {
 
   const handlePaddingRatioInput = (e) => {
     const value = parseFloat(e.target.value, 10);
-    if (value >= 1 && value <= 20) {
+    if (value >= 0) {
       setCustomBorderRatio(value);
       setBorderRatio(value / 100.0 + 1.0);
     }
