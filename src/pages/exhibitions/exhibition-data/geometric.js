@@ -5,7 +5,7 @@ const geometric = {
     name: 'geometric',
     about: '',
     displayName: 'Geometric',
-    progressStatus: ProgressStatus.IN_PROGRESS,
+    progressStatus: ProgressStatus.ARCHIVED,
     numberOfImages: 0,
     status: '',
     releaseStatus: '',

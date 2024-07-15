@@ -5,7 +5,7 @@ const precarious = {
     name: 'precarious',
     displayName: 'Precarious',
     about: '',
-    progressStatus: ProgressStatus.IN_PROGRESS,
+    progressStatus: ProgressStatus.ARCHIVED,
     numberOfImages: 0,
     status: '',
     releaseStatus: '',

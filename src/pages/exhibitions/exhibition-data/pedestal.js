@@ -6,7 +6,7 @@ const pedestal = {
     displayName: 'Pedestal',
     about: '', // 'Shifting focus from the main subject to the supporting pedestals',
     imageFolderName: 'pedestal',
-    progressStatus: ProgressStatus.IN_PROGRESS,
+    progressStatus: ProgressStatus.ARCHIVED,
     numberOfImages: 0,
     status: '',
     releaseStatus: '',

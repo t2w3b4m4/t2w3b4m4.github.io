@@ -16,14 +16,14 @@ function Contact() {
   }, []);
   return (
     <div className="contact">
-      If you have feedback, inquiry,
+      {/* If you have feedback, inquiry,
       {' '}
       <br />
       or, if you just want to say what&apos;s up,
       {' '}
       <br />
       feel free to
-      {' '}
+      {' '} */}
       <a
         href="mailto:twbm.site&#64;gmail.com"
         target="_blank"
@@ -31,9 +31,11 @@ function Contact() {
         className="anchorHoverNoEffect"
       >
         <span>
-          email me at
+          Email me at
           {' '}
           <u><i>twbm.site&#64;gmail.com</i></u>
+          {' '}
+          for any inquiries.
           {/* <span className="in-text-icon">
             <img
               alt="email"
