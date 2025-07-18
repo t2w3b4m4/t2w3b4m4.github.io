@@ -24,7 +24,7 @@ function Home() {
         <h3 id="hello-world">Hello World!</h3>
       </div>
 
-      <div id="tools-link">
+      <div className="bottom">
         <Link
           to={routes.tools.path}
         >

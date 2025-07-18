@@ -3,7 +3,7 @@ import { ProgressStatus } from '../constants';
 const vol1 = {
   meta: {
     name: 'vol-1',
-    displayName: '圖文並茂 Vol. 1 (Preview)',
+    displayName: '圖文並茂 Vol. 1',
     about: '', // 'Stories x Stories',
     numberOfImages: 91,
     progressStatus: ProgressStatus.ARCHIVED,
@@ -15,7 +15,7 @@ const vol1 = {
     {
       fileName: 'heavily-minimal.jpeg',
       displayName: 'Heavily Minimal',
-      description: 'Receipt of the purchase of a cast iron pan in a kitchenware wholesale, striking a stark contrast to the stuffed and chaotic store.',
+      description: '', // 'Receipt of the purchase of a cast iron pan in a kitchenware wholesale, striking a stark contrast to the stuffed and chaotic store.',
       date: '2017-12-01',
     },
     {
@@ -23,11 +23,11 @@ const vol1 = {
       displayName: 'Poster',
       description: 'The bedroom wall has this creamy color, and I thought it would look nicer if I hung a piece of artwork on it.',
     },
-    {
-      fileName: '006.JPG',
-      displayName: '"Who . . . will sleep on the floor for [you]?"',
-      description: 'From <i>The Fall</i>, by Albert Camus.',
-    },
+    // {
+    //   fileName: '006.JPG',
+    //   displayName: '"Who . . . will sleep on the floor for [you]?"',
+    //   description: 'From <i>The Fall</i>, by Albert Camus.',
+    // },
     {
       fileName: '009-intimacy-in-the-open.jpeg',
       displayName: 'Intimacy in the Open',
@@ -41,23 +41,23 @@ const vol1 = {
     {
       fileName: '050.JPG',
       displayName: 'Untitled (Originally titled - The Descending Glance)',
-      description: 'In the Upper East.',
+      description: '', // 'In the Upper East.',
     },
-    {
-      fileName: '064.JPG',
-      displayName: 'You are Not Alone',
-      description: '',
-    },
+    // {
+    //   fileName: '064.JPG',
+    //   displayName: 'You are Not Alone',
+    //   description: '',
+    // },
     {
       fileName: '070.JPG',
       displayName: 'Insecurity',
-      description: 'Early morning in the fall in the parking lot.',
+      description: '',
     },
-    {
-      fileName: '084.JPG',
-      displayName: "Neighbor's Secret",
-      description: 'View from the bedroom of my temporary apartment. (2015)',
-    },
+    // {
+    //   fileName: '084.JPG',
+    //   displayName: "Neighbor's Secret",
+    //   description: 'View from the bedroom of my temporary apartment. (2015)',
+    // },
     {
       fileName: '094.JPG',
       displayName: "CV's Confession",

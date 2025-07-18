@@ -92,3 +92,8 @@ hr {
   display: inline-block;
   vertical-align: middle;
 }
+
+.bottom {
+  position: absolute;
+  bottom: 24px;
+}

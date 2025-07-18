@@ -3,7 +3,7 @@ import { ProgressStatus } from '../constants';
 const vol2 = {
   meta: {
     name: 'vol-2',
-    displayName: '圖文並茂 Vol. 2 (Preview)',
+    displayName: '圖文並茂 Vol. 2',
     about: '', // 'Materialism x Love Story',
     progressStatus: ProgressStatus.ARCHIVED,
     numberOfImages: 88,
@@ -41,11 +41,11 @@ const vol2 = {
       displayName: 'Your Wife is Hot, Pt.1',
       description: '',
     },
-    {
-      fileName: '040-the-most-magical-place-on-earth.jpeg',
-      displayName: 'The Most Magical Place on Earth',
-      description: 'I had no idea I was going to the most magical place on earth until the day before. Never thought about going, but there I was.',
-    },
+    // {
+    //   fileName: '040-the-most-magical-place-on-earth.jpeg',
+    //   displayName: 'The Most Magical Place on Earth',
+    //   description: 'I had no idea I was going to the most magical place on earth until the day before. Never thought about going, but there I was.',
+    // },
     {
       fileName: '055-wish-no-1.jpeg',
       displayName: 'Wish #1',
@@ -59,12 +59,12 @@ const vol2 = {
     {
       fileName: '087-rooms-by-the-sea.jpg',
       displayName: 'Rooms by the Sea',
-      description: "Inspired by Edward Hopper's painting, the sun, and the need for it to be materialized and seen.",
+      description: '', // "Inspired by Edward Hopper's painting, the sun, and the need for it to be materialized and seen.",
     },
     {
       fileName: '088-self-writing-story.jpg',
       displayName: 'Self-Writing Story',
-      description: "From Hemingway's <i>A Movable Feast</i>.<br>A reminder to my poetic self.",
+      description: '', // "From Hemingway's <i>A Movable Feast</i>.<br>A reminder to my poetic self.",
     },
   ],
 };

@@ -3,7 +3,7 @@ import { ProgressStatus } from '../constants';
 const bkSky = {
   meta: {
     name: 'bk-sky',
-    displayName: 'Brooklyn Sky (Preview)',
+    displayName: 'Brooklyn Sky',
     about: '',
     progressStatus: ProgressStatus.ARCHIVED,
     numberOfImages: 34,

@@ -3,7 +3,7 @@ import { ProgressStatus } from '../constants';
 const vol0 = {
   meta: {
     name: 'vol-0',
-    displayName: '圖文並茂 Vol. 0 (Preview)',
+    displayName: '圖文並茂 Vol. 0',
     about: '',
     numberOfImages: 84,
     progressStatus: ProgressStatus.RELEASED,
@@ -19,11 +19,11 @@ const vol0 = {
       description: '',
       date: '2017-12-01',
     },
-    {
-      fileName: '006.JPG',
-      displayName: '"Who . . . will sleep on the floor for [you]?"',
-      description: '', // 'From <i>The Fall</i>, by Albert Camus.',
-    },
+    // {
+    //   fileName: '006.JPG',
+    //   displayName: '"Who . . . will sleep on the floor for [you]?"',
+    //   description: '', // 'From <i>The Fall</i>, by Albert Camus.',
+    // },
     {
       fileName: '009-intimacy-in-the-open.jpeg',
       displayName: 'Intimacy in the Open',

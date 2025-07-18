@@ -31,11 +31,11 @@ function Contact() {
         className="anchorHoverNoEffect"
       >
         <span>
-          Email me at
-          {' '}
+          {/* Email me at */}
+          {/* {' '} */}
           <u><i>twbm.site&#64;gmail.com</i></u>
-          {' '}
-          for any inquiries.
+          {/* {' '} */}
+          {/* for any inquiries. */}
           {/* <span className="in-text-icon">
             <img
               alt="email"
