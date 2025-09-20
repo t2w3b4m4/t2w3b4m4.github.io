@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+/* eslint-disable no-multi-assign */
 import React, { useEffect, useRef, useState } from 'react';
 import './ImageBorder.css';
 
@@ -8,10 +9,92 @@ const FULL_HEIGHT_103 = 1.03;
 const FULL_HEIGHT_105 = 1.05;
 const DEFAULT_FILL_STYLE = 'white';
 const FILL_STYLE_BLACK = 'black';
+const aspectRatios = [
+  { value: 0, label: 'Original' },
+  { value: 1, label: '1:1' },
+  { value: 2, label: '3:2' },
+  { value: 3, label: '2:3' },
+  { value: 4, label: '5:4' },
+  { value: 5, label: '4:5' },
+];
+
+const getCanvasWidthHeight = (width, height, aspectRatio, borderRatio) => {
+  let canvasWidth = width;
+  let canvasHeight = height;
+
+  switch (aspectRatio) {
+    case 0: // Original
+      canvasWidth = width;
+      canvasHeight = height;
+      break;
+    case 1: // Squared
+      canvasWidth = canvasHeight = Math.max(width, height);
+      break;
+    case 2: // 3:2
+      {
+        const targetRatio = 3 / 2;
+        const currentRatio = width / height;
+        if (currentRatio < targetRatio) {
+          // Image is taller or more square than 3:2, adjust width
+          canvasWidth = Math.round(height * targetRatio);
+          canvasHeight = height;
+        } else {
+          // Image is wider than 3:2, adjust height
+          canvasWidth = width;
+          canvasHeight = Math.round(width / targetRatio);
+        }
+      }
+      break;
+    case 3: // 2:3
+      {
+        const targetRatio = 2 / 3;
+        const currentRatio = width / height;
+        if (currentRatio < targetRatio) {
+          canvasWidth = Math.round(height * targetRatio);
+          canvasHeight = height;
+        } else {
+          canvasWidth = width;
+          canvasHeight = Math.round(width / targetRatio);
+        }
+      }
+      break;
+    case 4: // 5:4
+      {
+        const targetRatio = 5 / 4;
+        const currentRatio = width / height;
+        if (currentRatio < targetRatio) {
+          canvasWidth = Math.round(height * targetRatio);
+          canvasHeight = height;
+        } else {
+          canvasWidth = width;
+          canvasHeight = Math.round(width / targetRatio);
+        }
+      }
+      break;
+    case 5: // 4:5
+      {
+        const targetRatio = 4 / 5;
+        const currentRatio = width / height;
+        if (currentRatio < targetRatio) {
+          canvasWidth = Math.round(height * targetRatio);
+          canvasHeight = height;
+        } else {
+          canvasWidth = width;
+          canvasHeight = Math.round(width / targetRatio);
+        }
+      }
+      break;
+    default:
+      canvasWidth = width;
+      canvasHeight = height;
+  }
+
+  return [canvasWidth * borderRatio, canvasHeight * borderRatio];
+};
 
 function ImageBorder() {
   const canvasRef = useRef(null);
-  const [squaredBackground, setSquaredBackground] = useState(false);
+  const [aspectRatio, setAspectRatio] = useState(0);
   const [image, setImage] = useState(null);
   const [borderRatio, setBorderRatio] = useState(FULL_HEIGHT);
   const [customBorderRatio, setCustomBorderRatio] = useState(0);
@@ -62,10 +145,6 @@ function ImageBorder() {
     link.click();
   };
 
-  const handleToggleSquaredBackground = (e) => {
-    setSquaredBackground(e.target.checked);
-  };
-
   const handleToggleUseCustomBorderRatio = (e) => {
     const { checked } = e.target;
     setUseCustomBorderRatio(checked);
@@ -102,19 +181,9 @@ function ImageBorder() {
       // Get the size of the image
       const { width, height } = img;
 
-      if (squaredBackground) {
-        // Calculate the size of the background
-        const bgSize = Math.max(width, height) * borderRatio;
-
-        // Set the size of the canvas
-        canvas.width = bgSize;
-        canvas.height = bgSize;
-      } else {
-        const borderSize = Math.max(width * borderRatio - width, height * borderRatio - height);
-        // Set the size of the canvas
-        canvas.width = width + borderSize;
-        canvas.height = height + borderSize;
-      }
+      const [canvasWidth, canvasHeight] = getCanvasWidthHeight(width, height, aspectRatio, borderRatio);
+      canvas.width = canvasWidth;
+      canvas.height = canvasHeight;
 
       // Clear the canvas
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -128,7 +197,7 @@ function ImageBorder() {
       // Draw the image onto the canvas
       ctx.drawImage(img, x, y);
     };
-  }, [image, borderRatio, fillStyle, squaredBackground]);
+  }, [image, borderRatio, fillStyle, aspectRatio]);
 
   return (
     <>
@@ -138,9 +207,19 @@ function ImageBorder() {
 
         <hr />
         <div>
-          <b>Squared Background:</b>
-          {' '}
-          <input type="checkbox" checked={squaredBackground} onChange={handleToggleSquaredBackground} />
+          <div>Aspect Ratio:</div>
+          {aspectRatios.map((ar) => (
+            <div key={ar.value} style={{ marginLeft: 8 }}>
+              <input
+                type="radio"
+                name="aspectRatio"
+                value={ar.value}
+                checked={aspectRatio === ar.value}
+                onChange={() => setAspectRatio(ar.value)}
+              />
+              {ar.label}
+            </div>
+          ))}
         </div>
         <hr />
         <div>
