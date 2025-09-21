@@ -89,7 +89,10 @@ const getCanvasWidthHeight = (width, height, aspectRatio, borderRatio) => {
       canvasHeight = height;
   }
 
-  return [canvasWidth * borderRatio, canvasHeight * borderRatio];
+  // ensure border width and height are the same
+  const borderSize = Math.max(canvasWidth * borderRatio - canvasWidth, canvasHeight * borderRatio - canvasHeight);
+
+  return [canvasWidth + borderSize, canvasHeight + borderSize];
 };
 
 function ImageBorder() {
